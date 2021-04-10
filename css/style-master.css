@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: var(--poppins);
 }
 
 html, body {
@@ -23,11 +24,13 @@ html, body {
   --text-tertiary: #7B8898;
   /* Font/text values */
   --poppins: 'Poppins', sans-serif, Arial;
+  /* Positioning */
+  --content-width: 95%;
+  --content-max-width: 1400px;
 }
 
 /* Character Styles */
 .body-text {
-  font-family: var(--poppins);
   font-weight: 400;
   font-size: 16px;
   line-height: 55.5px;
@@ -35,7 +38,6 @@ html, body {
 }
 
 .emphasized-text {
-  font-family: var(--poppins);
   font-weight: 500;
   font-size: 18px;
   line-height: 28.5px;
@@ -43,7 +45,6 @@ html, body {
 }
 
 h1 {
-  font-family: var(--poppins);
   font-weight: 600;
   font-size: 64px;
   line-height: 55px;
@@ -51,7 +52,6 @@ h1 {
 }
 
 h2 {
-  font-family: var(--poppins);
   font-weight: 600;
   font-size: 35px;
   line-height: 45.5px;
@@ -59,15 +59,18 @@ h2 {
 }
 
 h3 {
-  font-family: var(--poppins);
   font-weight: 600;
   font-size: 24px;
   line-height: 55px;
   color: var(--text-primary);
 }
 
+a {
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
 .primary-button {
-  font-family: var(--poppins);
   text-decoration: none;
   padding: 1em 2.5em;
   background-color: var(--primary);
@@ -82,4 +85,37 @@ h3 {
 
 .primary-button:hover {
   background-position: right;
+}
+
+.bg-dark {
+  background-color: var(--bg-dark);
+}
+
+.bg-lighter {
+  background-color: var(--bg-lighter);
+}
+
+.bg-emphasize {
+  background-color: var(--bg-emphasize);
+}
+
+.text-primary {
+  color: var(--text-primary);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-tertiary {
+  color: var(--text-tertiary);
+}
+
+.content-inner {
+  width: var(--content-width);
+  max-width: var(--content-max-width);
+}
+
+.card {
+  border: 1px solid var(--card-border);
 }

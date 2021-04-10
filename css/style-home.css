@@ -1,0 +1,68 @@
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 65px;
+}
+
+header .content-inner {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.logo svg {
+  height: 19px;
+}
+
+.logo .name {
+  height: 35px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.logo .name .title {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-primary)
+}
+
+.logo .name .version {
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--text-secondary);
+  padding-left: 5px;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  color: var(--text-secondary);
+}
+
+.navigation>* {
+  margin-left: 2em;
+}
+
+.navigation .github a, .display-mode-switch {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
