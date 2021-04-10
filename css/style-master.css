@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background: var(--bg-lighter);
+}
+
+:root {
+  /* Colors: */
+  --primary: #F7503D;
+  --primary-light: #EFAE74;
+  --card-border: #FFFFFF12;
+  --bg-emphasize: #0C11154D;
+  --bg-dark: #0C1115;
+  --bg-lighter: #1F242A;
+  --text-primary: #FFFFFF;
+  --text-secondary: #FFFFFFB3;
+  --text-tertiary: #7B8898;
+  /* Font/text values */
+  --poppins: 'Poppins', sans-serif, Arial;
+}
+
+/* Character Styles */
+.body-text {
+  font-family: var(--poppins);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 55.5px;
+  color: var(--text-tertiary);
+}
+
+.emphasized-text {
+  font-family: var(--poppins);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28.5px;
+  color: var(--text-tertiary);
+}
+
+h1 {
+  font-family: var(--poppins);
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 55px;
+  color: var(--text-primary);
+}
+
+h2 {
+  font-family: var(--poppins);
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 45.5px;
+  color: var(--text-primary);
+}
+
+h3 {
+  font-family: var(--poppins);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 55px;
+  color: var(--text-primary);
+}
+
+.primary-button {
+  font-family: var(--poppins);
+  text-decoration: none;
+  padding: 1em 2.5em;
+  background-color: var(--primary);
+  color: var(--text-primary);
+  border-radius: 0.25em;
+  background-image: linear-gradient(75deg, var(--primary), var(--primary-light), var(--primary-light), var(--primary));
+  background-size: 300%;
+  background-position: left;
+  transition: 300ms background-position ease-in-out;
+  cursor: pointer;
+}
+
+.primary-button:hover {
+  background-position: right;
+}
