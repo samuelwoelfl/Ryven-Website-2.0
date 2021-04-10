@@ -29,6 +29,16 @@ html, body {
   --content-max-width: 1400px;
 }
 
+[data-theme=light] {
+  --card-border: #00000012;
+  --bg-emphasize: #E6DDD44D;
+  --bg-dark: #fef8f1;
+  --bg-lighter: #fbf8f5;
+  --text-primary: #161616;
+  --text-secondary: #161616B3;
+  --text-tertiary: #4b4b4b;
+}
+
 /* Character Styles */
 .body-text {
   font-weight: 400;

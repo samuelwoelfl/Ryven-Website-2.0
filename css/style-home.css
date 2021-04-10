@@ -60,9 +60,24 @@ header .content-inner {
   margin-left: 2em;
 }
 
-.navigation .github a, .display-mode-switch {
+.navigation .github a, .theme-switch {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 100%;
+  position: relative;
+  width: 40px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.theme-switch:hover {
+  cursor: pointer;
 }
