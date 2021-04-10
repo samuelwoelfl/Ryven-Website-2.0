@@ -27,3 +27,4 @@ function switchTheme(e) {
 }
 
 toggleSwitch.addEventListener('change', switchTheme, false);
+// https://medium.com/swlh/dark-mode-using-css-variables-cf065a7fa133#:~:text=For%20example%2C%20--text-color%20in%20light%20mode%20can%20be,colors%20or%20shades%20of%20colors%20for%20new%20views.

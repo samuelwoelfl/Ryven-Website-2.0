@@ -22,11 +22,13 @@ html, body {
   --text-primary: #FFFFFF;
   --text-secondary: #FFFFFFB3;
   --text-tertiary: #7B8898;
+  --shadow-color: #00000059;
   /* Font/text values */
   --poppins: 'Poppins', sans-serif, Arial;
   /* Positioning */
   --content-width: 95%;
   --content-max-width: 1400px;
+  --header-hight: 70px;
 }
 
 [data-theme=light] {
@@ -37,6 +39,7 @@ html, body {
   --text-primary: #161616;
   --text-secondary: #161616B3;
   --text-tertiary: #4b4b4b;
+  --shadow-color: #0000000f;
 }
 
 /* Character Styles */
@@ -57,8 +60,9 @@ html, body {
 h1 {
   font-weight: 600;
   font-size: 64px;
-  line-height: 55px;
+  line-height: 82px;
   color: var(--text-primary);
+  text-align: center;
 }
 
 h2 {
@@ -81,15 +85,19 @@ a {
 }
 
 .primary-button {
-  text-decoration: none;
-  padding: 1em 2.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+  width: 300px;
   background-color: var(--primary);
-  color: var(--text-primary);
-  border-radius: 0.25em;
-  background-image: linear-gradient(75deg, var(--primary), var(--primary-light), var(--primary-light), var(--primary));
+  color: #ffffff;
+  border-radius: 5px;
+  background-image: linear-gradient(90deg, var(--primary), var(--primary-light), var(--primary-light), var(--primary));
   background-size: 300%;
   background-position: left;
-  transition: 300ms background-position ease-in-out;
+  transition: .2s ease-in-out;
   cursor: pointer;
 }
 
@@ -97,28 +105,24 @@ a {
   background-position: right;
 }
 
-.bg-dark {
-  background-color: var(--bg-dark);
-}
-
-.bg-lighter {
-  background-color: var(--bg-lighter);
-}
-
-.bg-emphasize {
-  background-color: var(--bg-emphasize);
-}
-
-.text-primary {
+.secondary-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+  width: 300px;
+  background-color: none;
   color: var(--text-primary);
+  border: 2px solid var(--text-primary);
+  border-radius: 5px;
+  transition: .1s ease-in-out;
+  cursor: pointer;
 }
 
-.text-secondary {
-  color: var(--text-secondary);
-}
-
-.text-tertiary {
-  color: var(--text-tertiary);
+.secondary-button:hover {
+  background-color: var(--text-primary);
+  color: var(--bg-dark)
 }
 
 .content-inner {
@@ -128,4 +132,10 @@ a {
 
 .card {
   border: 1px solid var(--card-border);
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  padding-top: var(--header-hight);
 }
