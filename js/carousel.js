@@ -5,7 +5,7 @@ window.onload = function() {
 function recCarouselEvents() {
   // RECOMMENDATION CAROUSELS
   var recTranslate = 0;
-  var recTranslateIncrem = 452;
+  var recTranslateIncrem = 386 * 2;
   var carRecsItems = $('.carousel-recs .carousel-listitem');
   var carRecsItem = $(carRecsItems[0]);
   var carRecsItemWidth = carRecsItem.outerWidth(true);

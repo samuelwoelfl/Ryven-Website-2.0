@@ -295,14 +295,13 @@ header .content-inner {
   padding: 20px;
   margin: 0 50px;
   border-radius: 4px;
-  background-color: var(--bg-dark);
-  border: 1px solid var(--bg-lighter);
+  background-color: var(--bg-emphasize);
   transition: .2s ease;
 }
 
 .carousel-button:hover {
   cursor: pointer;
-  background-color: var(--bg-emphasize);
+  background-color: var(--bg-dark);
 }
 
 .carousel-next-rec svg {
@@ -310,34 +309,94 @@ header .content-inner {
 }
 
 .carousel-body .carousel-list {
-  list-style: none;
   padding-left: 0;
   width: 3202px;
-  height: 200px;
-  transition: transform 1s;
+  transition: transform .7s;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
 }
 
 .carousel-body .carousel-listitem {
   float: left;
   margin-right: 26px;
   background-color: var(--bg-emphasize);
-  height: 200px;
-  width: 200px;
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.carousel-body .carousel-listitem:hover>img {
+  transform: translateY(-8px);
 }
 
 .carousel-listitem img {
   width: 50%;
+  margin: 35px;
+  border-radius: 4px;
+  transition: .3s ease;
 }
 
-.carousel-body .carousel-listitem:nth-child(2n) {
-  background-color: #ececec;
+.carousel-listitem .description {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-.carousel-body .carousel-listitem:nth-child(2n+1) {
-  background-color: #dadada;
+.carousel-listitem .description h4 {
+  text-align: center;
+  color: var(--text-primary);
+  font-size: 22px;
+  line-height: 33px;
+  margin-bottom: 3%;
 }
 
-.carousel-body .carousel-itemlink {
+.carousel-listitem .description span {
+  text-align: center;
+  width: 80%;
+}
+
+.carousel-listitem .buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 15%;
+}
+
+.carousel-listitem .button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+  width: 48%;
+  border-radius: 5px;
+  background-size: 300%;
+  background-position: left;
+  transition: .2s ease-in-out;
+  cursor: pointer;
+}
+
+.carousel-listitem .button.github {
+  border: 2px solid var(--text-primary);
+  background: none;
+  color: var(--text-primary);
+}
+
+.carousel-listitem .button.website {
+  background: var(--text-primary);
+  color: var(--bg-dark);
+}
+
+.carousel-listitem .carousel-body .carousel-itemlink {
   text-decoration: none;
 }
 
@@ -346,10 +405,4 @@ header .content-inner {
   transition: opacity .5s;
   height: 100%;
   width: 100%;
-}
-
-.carousel-body .carousel-listitem:hover .carousel-hover-container {
-  display: block;
-  background-color: rgba(255, 255, 255, .9);
-  opacity: .9;
 }
