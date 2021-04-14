@@ -61,7 +61,6 @@ h1 {
   font-size: 64px;
   line-height: 82px;
   color: var(--text-primary);
-  text-align: center;
 }
 
 h2 {
@@ -148,4 +147,130 @@ a {
   justify-content: flex-start;
   align-items: center;
   padding-top: var(--header-hight);
+}
+
+/* ------------------------ HEADER -------------------- */
+header {
+  z-index: 99;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: var(--header-hight);
+  position: fixed;
+  background-color: var(--bg-dark);
+  box-shadow: 0px 3px 35px var(--shadow-color);
+}
+
+header .content-inner {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.logo svg {
+  height: 19px;
+  margin-right: 10px;
+}
+
+.logo .name {
+  height: 35px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.logo .name .title {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-primary)
+}
+
+.logo .name .version {
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--text-secondary);
+  padding-left: 5px;
+}
+
+header .navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  color: var(--text-secondary);
+}
+
+header .navigation>* {
+  margin-left: 2em;
+  transition: .1s ease;
+}
+
+header .navigation .active, .navigation>*:hover {
+  color: var(--text-primary);
+}
+
+header .navigation .github a, .theme-switch {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.theme-switch input, .sun {
+  display: none;
+}
+
+.theme-switch-label svg:hover {
+  cursor: pointer;
+}
+
+footer {
+  background-color: var(--bg-dark);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+footer .top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 7vh 0 7vh 0;
+  border-bottom: 1px solid var(--card-border);
+}
+
+footer h1 {
+  font-size: 40px;
+  line-height: 60px;
+  margin-bottom: 2%;
+}
+
+footer .bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5vh 0;
+}
+
+footer .bottom .navigation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
