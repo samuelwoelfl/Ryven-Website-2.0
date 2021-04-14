@@ -85,6 +85,12 @@ h3 {
   margin-top: 2%;
 }
 
+.page-heading {
+  text-align: center;
+  margin-top: 14vh;
+  margin-bottom: 10vh;
+}
+
 a {
   color: var(--text-secondary);
   text-decoration: none;
