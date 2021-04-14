@@ -80,10 +80,12 @@
 
 .main .ctas .download {
   margin-right: 5px;
+  width: 300px;
 }
 
 .main .ctas .github {
   margin-left: 5px;
+  width: 300px;
 }
 
 .main .presentation {
@@ -211,12 +213,16 @@
   padding: 20px;
   border-radius: 4px;
   background-color: var(--bg-emphasize);
-  transition: .2s ease;
+  transition: background-color .2s ease, transform .1 ease;
 }
 
 .carousel-button:hover {
   cursor: pointer;
   background-color: var(--bg-dark);
+}
+
+.carousel-button:active {
+  transform: scale(0.96);
 }
 
 .carousel-next-rec svg {
@@ -252,10 +258,15 @@
   align-items: center;
   padding: 20px;
   border-radius: 6px;
+  transition: .2s ease;
 }
 
 .carousel-body .carousel-listitem:hover>img {
   transform: translateY(-8px);
+}
+
+.carousel-body .carousel-listitem:hover {
+  background-color: var(--bg-dark)
 }
 
 .carousel-listitem img {
@@ -301,22 +312,77 @@
   align-items: center;
   height: 55px;
   width: 48%;
+  flex-grow: 1;
   border-radius: 5px;
   background-size: 300%;
   background-position: left;
-  transition: .2s ease-in-out;
+  transition: background-color .2s ease-in-out, transform .1s ease;
   cursor: pointer;
+}
+
+.carousel-listitem .button svg {
+  margin-left: 6px;
+  height: 40%;
+}
+
+.carousel-listitem .button:active {
+  transform: scale(0.97);
+  background-color: var(--text-primary);
 }
 
 .carousel-listitem .button.github {
   border: 2px solid var(--text-primary);
   background: none;
   color: var(--text-primary);
+  transition: .2s ease;
+  margin-right: 2%;
+}
+
+.carousel-listitem .button.github svg {
+  margin-bottom: 1px;
+  margin-right: 9px;
+}
+
+.carousel-listitem .button.github span {
+  padding-right: 9px;
+}
+
+.carousel-listitem .button.github path {
+  transition: .2s ease;
+}
+
+.carousel-listitem .button.github:hover {
+  border: 2px solid var(--text-secondary);
+  /* background: var(--text-secondary); */
+  color: var(--text-secondary);
+  /* font-weight: 500; */
+}
+
+.carousel-listitem .button.github:hover path {
+  fill: var(--text-secondary);
 }
 
 .carousel-listitem .button.website {
   background: var(--text-primary);
   color: var(--bg-dark);
+  font-weight: 500;
+  margin-left: 2%;
+}
+
+.carousel-listitem .button.website svg {
+  transition: .2s ease;
+}
+
+.carousel-listitem .button.website:hover>svg {
+  transform: translate(-1.5px, 1.5px);
+}
+
+.carousel-listitem .button.website:hover {
+  background-color: var(--text-secondary)
+}
+
+.carousel-listitem .button.website:active>svg {
+  transform: translate(5px, -5px);
 }
 
 .carousel-listitem .carousel-body .carousel-itemlink {

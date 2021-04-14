@@ -96,19 +96,24 @@ a {
   justify-content: center;
   align-items: center;
   height: 55px;
-  width: 300px;
+  padding: 0 30px;
   background-color: var(--primary);
   color: #ffffff;
   border-radius: 5px;
   background-image: linear-gradient(90deg, var(--primary), var(--primary-light), var(--primary-light), var(--primary));
   background-size: 300%;
   background-position: left;
-  transition: .2s ease-in-out;
+  transition: background-position .2s ease-in-out, transform .05s ease-in-out;
   cursor: pointer;
 }
 
 .primary-button:hover {
   background-position: right;
+}
+
+.primary-button:active {
+  transform: scale(0.97);
+  background-position: left;
 }
 
 .secondary-button {
@@ -261,6 +266,22 @@ footer h1 {
   margin-bottom: 2%;
 }
 
+footer .primary-button span {
+  margin-right: 10px;
+}
+
+footer .primary-button svg {
+  transition: .2s ease;
+}
+
+footer .primary-button:hover>svg {
+  transform: translate(-1.5px, 1.5px);
+}
+
+footer .primary-button:active>svg {
+  transform: translate(5px, -5px);
+}
+
 footer .bottom {
   display: flex;
   flex-direction: row;
@@ -269,8 +290,52 @@ footer .bottom {
   padding: 5vh 0;
 }
 
+footer .bottom .logo, footer .bottom .social {
+  width: 14%;
+}
+
 footer .bottom .navigation {
   display: flex;
   flex-direction: row;
   align-items: center;
+  color: var(--text-secondary);
+}
+
+footer .navigation .standard {
+  padding-right: 1vw;
+  border-right: 1px solid var(--card-border);
+}
+
+footer .navigation .extra {
+  padding-left: 1vw;
+}
+
+footer .navigation a {
+  margin: 0 1em;
+  transition: .1s ease;
+  font-size: 15px;
+  text-align: center;
+}
+
+footer .navigation a:hover {
+  color: var(--text-primary);
+}
+
+footer .social {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+footer .social a svg path {
+  transition: .1s ease;
+}
+
+footer .social a:hover svg path {
+  fill: var(--text-primary);
+}
+
+footer .social a:active {
+  transform: scale(0.97);
 }
