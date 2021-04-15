@@ -61,7 +61,6 @@ h1 {
   font-size: 64px;
   line-height: 82px;
   color: var(--text-primary);
-  text-align: center;
 }
 
 h2 {
@@ -86,6 +85,12 @@ h3 {
   margin-top: 2%;
 }
 
+.page-heading {
+  text-align: center;
+  margin-top: 14vh;
+  margin-bottom: 10vh;
+}
+
 a {
   color: var(--text-secondary);
   text-decoration: none;
@@ -97,19 +102,24 @@ a {
   justify-content: center;
   align-items: center;
   height: 55px;
-  width: 300px;
+  padding: 0 30px;
   background-color: var(--primary);
   color: #ffffff;
   border-radius: 5px;
   background-image: linear-gradient(90deg, var(--primary), var(--primary-light), var(--primary-light), var(--primary));
   background-size: 300%;
   background-position: left;
-  transition: .2s ease-in-out;
+  transition: background-position .2s ease-in-out, transform .05s ease-in-out;
   cursor: pointer;
 }
 
 .primary-button:hover {
   background-position: right;
+}
+
+.primary-button:active {
+  transform: scale(0.97);
+  background-position: left;
 }
 
 .secondary-button {
@@ -148,4 +158,190 @@ a {
   justify-content: flex-start;
   align-items: center;
   padding-top: var(--header-hight);
+}
+
+/* ------------------------ HEADER -------------------- */
+header {
+  z-index: 99;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: var(--header-hight);
+  position: fixed;
+  background-color: var(--bg-dark);
+  box-shadow: 0px 3px 35px var(--shadow-color);
+}
+
+header .content-inner {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.logo svg {
+  height: 19px;
+  margin-right: 10px;
+}
+
+.logo .name {
+  height: 35px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.logo .name .title {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-primary)
+}
+
+.logo .name .version {
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--text-secondary);
+  padding-left: 5px;
+}
+
+header .navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  color: var(--text-secondary);
+}
+
+header .navigation>* {
+  margin-left: 2em;
+  transition: .1s ease;
+}
+
+header .navigation .active, .navigation>*:hover {
+  color: var(--text-primary);
+}
+
+header .navigation .github a, .theme-switch {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.theme-switch input, .sun {
+  display: none;
+}
+
+.theme-switch-label svg:hover {
+  cursor: pointer;
+}
+
+footer {
+  background-color: var(--bg-dark);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+footer .top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 7vh 0 7vh 0;
+  border-bottom: 1px solid var(--card-border);
+}
+
+footer h1 {
+  font-size: 40px;
+  line-height: 60px;
+  margin-bottom: 2%;
+}
+
+footer .primary-button span {
+  margin-right: 10px;
+}
+
+footer .primary-button svg {
+  transition: .2s ease;
+}
+
+footer .primary-button:hover>svg {
+  transform: translate(-1.5px, 1.5px);
+}
+
+footer .primary-button:active>svg {
+  transform: translate(5px, -5px);
+}
+
+footer .bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5vh 0;
+}
+
+footer .bottom .logo, footer .bottom .social {
+  width: 14%;
+}
+
+footer .bottom .navigation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: var(--text-secondary);
+}
+
+footer .navigation .standard {
+  padding-right: 1vw;
+  border-right: 1px solid var(--card-border);
+}
+
+footer .navigation .extra {
+  padding-left: 1vw;
+}
+
+footer .navigation a {
+  margin: 0 1em;
+  transition: .1s ease;
+  font-size: 15px;
+  text-align: center;
+}
+
+footer .navigation a:hover {
+  color: var(--text-primary);
+}
+
+footer .social {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+footer .social a svg path {
+  transition: .1s ease;
+}
+
+footer .social a:hover svg path {
+  fill: var(--text-primary);
+}
+
+footer .social a:active {
+  transform: scale(0.97);
 }

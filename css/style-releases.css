@@ -1,0 +1,151 @@
+.releases {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.release {
+  width: calc(100% - 65px);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.release .version {
+  color: var(--text-tertiary);
+  width: 50px;
+  font-size: 18px;
+  text-align: right;
+  position: absolute;
+}
+
+.release:first-child .version::after {
+  content: "latest version";
+  display: block;
+  white-space: nowrap;
+  width: 110px;
+  font-size: 14px;
+  font-weight: 300;
+  text-align: center;
+  color: var(--primary);
+  margin-top: 11px;
+  border: 1px solid var(--primary);
+  border-radius: 4px;
+  margin-left: -63px;
+}
+
+.release .container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 1vh;
+  margin-left: 77px;
+}
+
+.release .content {
+  padding-left: 25px;
+  border-left: 3px solid var(--text-tertiary);
+  padding-bottom: 4vh;
+}
+
+.release .date {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1vh;
+}
+
+.release .date span {
+  font-size: 18px;
+  width: 100%;
+  color: var(--text-secondary);
+}
+
+.release .bullet {
+  width: 11px;
+  height: 10px;
+  margin-left: -3px;
+  margin-right: 24px;
+  border-radius: 50px;
+  background-color: var(--text-tertiary);
+}
+
+.release .inner {
+  padding: 30px 35px;
+  background-color: var(--bg-emphasize);
+  border-radius: 6px;
+}
+
+.release .inner h3 {
+  margin-bottom: 2vh;
+}
+
+.release .inner .details h5 {
+  color: var(--text-tertiary);
+  margin-top: 3vh;
+  margin-bottom: .5vh;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.release .inner .details ul {
+  padding-left: 30px;
+}
+
+.release .inner .details li {
+  margin-top: 1.5vh;
+}
+
+.release .buttons {
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.release .buttons .button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  height: 45px;
+  padding: 0 5%;
+  border-radius: 5px;
+  transition: background-color .2s ease-in-out, transform .1s ease;
+  cursor: pointer;
+}
+
+.release .buttons .button.download {
+  background-image: linear-gradient(90deg, var(--primary), var(--primary-light), var(--primary-light), var(--primary));
+  background-size: 300%;
+  background-position: left;
+  color: #fff;
+  margin-right: 10px;
+}
+
+.release .buttons .button.github {
+  border: 2px solid var(--text-primary);
+  background: none;
+  color: var(--text-primary);
+  transition: .2s ease;
+  margin-right: 2%;
+}
+
+.release .buttons .button.github svg {
+  margin-bottom: 3px;
+  margin-right: 9px;
+  height: 50%;
+}
+
+.release .buttons .button.github span {
+  padding-right: 9px;
+}

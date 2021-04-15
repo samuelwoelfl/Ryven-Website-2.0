@@ -1,90 +1,3 @@
-header {
-  z-index: 99;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: var(--header-hight);
-  position: fixed;
-  background-color: var(--bg-dark);
-  box-shadow: 0px 3px 35px var(--shadow-color);
-}
-
-header .content-inner {
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.logo svg {
-  height: 19px;
-  margin-right: 10px;
-}
-
-.logo .name {
-  height: 35px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-
-.logo .name .title {
-  font-size: 24px;
-  font-weight: 600;
-  color: var(--text-primary)
-}
-
-.logo .name .version {
-  font-size: 11px;
-  font-weight: 400;
-  color: var(--text-secondary);
-  padding-left: 5px;
-}
-
-.navigation {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  color: var(--text-secondary);
-}
-
-.navigation>* {
-  margin-left: 2em;
-  transition: .1s ease;
-}
-
-.navigation .active, .navigation>*:hover {
-  color: var(--text-primary);
-}
-
-.navigation .github a, .theme-switch {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.theme-switch input, .sun {
-  display: none;
-}
-
-.theme-switch-label svg:hover {
-  cursor: pointer;
-}
-
 .landingpage {
   height: 100vh;
   width: 100%;
@@ -145,6 +58,7 @@ header .content-inner {
 .main h1 {
   margin-top: 6.5%;
   max-width: 890px;
+  text-align: center;
 }
 
 .main .subheading {
@@ -166,10 +80,12 @@ header .content-inner {
 
 .main .ctas .download {
   margin-right: 5px;
+  width: 300px;
 }
 
 .main .ctas .github {
   margin-left: 5px;
+  width: 300px;
 }
 
 .main .presentation {
@@ -184,6 +100,7 @@ header .content-inner {
   margin-top: 10%;
   width: var(--content-width);
   max-width: 1156px;
+  aspect-ratio: attr(width) / attr(height);
   border: 10px solid var(--bg-dark);
   border-radius: 9px;
   box-shadow: 0px 3px 99px #EFAE741a;
@@ -259,4 +176,222 @@ header .content-inner {
 
 .features .feature-container:nth-child(even) {
   flex-direction: row-reverse;
+}
+
+/* ------------- Carousel ----------------- */
+.carousel {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  width: var(--content-width);
+  margin: 12% 0;
+}
+
+.carousel-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+  width: 100%;
+}
+
+.carousel-body {
+  overflow: hidden;
+  width: 100%;
+  max-width: var(--content-max-width);
+}
+
+.carousel-button {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 4px;
+  background-color: var(--bg-emphasize);
+  transition: background-color .2s ease, transform .1 ease;
+}
+
+.carousel-button:hover {
+  cursor: pointer;
+  background-color: var(--bg-dark);
+}
+
+.carousel-button:active {
+  transform: scale(0.96);
+}
+
+.carousel-next-rec svg {
+  transform: rotate(180deg);
+}
+
+.carousel-next-rec {
+  margin-left: 50px;
+}
+
+.carousel-prev-rec {
+  margin-right: 50px;
+}
+
+.carousel-body .carousel-list {
+  padding-left: 0;
+  width: 3202px;
+  transition: transform .7s;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.carousel-body .carousel-listitem {
+  float: left;
+  margin-right: 26px;
+  background-color: var(--bg-emphasize);
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-radius: 6px;
+  transition: .2s ease;
+}
+
+.carousel-body .carousel-listitem:hover>img {
+  transform: translateY(-8px);
+}
+
+.carousel-body .carousel-listitem:hover {
+  background-color: var(--bg-dark)
+}
+
+.carousel-listitem img {
+  width: 50%;
+  margin: 35px;
+  border-radius: 4px;
+  transition: .3s ease;
+}
+
+.carousel-listitem .description {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.carousel-listitem .description h4 {
+  text-align: center;
+  color: var(--text-primary);
+  font-size: 22px;
+  line-height: 33px;
+  margin-bottom: 3%;
+}
+
+.carousel-listitem .description span {
+  text-align: center;
+  width: 80%;
+}
+
+.carousel-listitem .buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 15%;
+}
+
+.carousel-listitem .button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+  width: 48%;
+  flex-grow: 1;
+  border-radius: 5px;
+  background-size: 300%;
+  background-position: left;
+  transition: background-color .2s ease-in-out, transform .1s ease;
+  cursor: pointer;
+}
+
+.carousel-listitem .button svg {
+  margin-left: 6px;
+  height: 40%;
+}
+
+.carousel-listitem .button:active {
+  transform: scale(0.97);
+  background-color: var(--text-primary);
+}
+
+.carousel-listitem .button.github {
+  border: 2px solid var(--text-primary);
+  background: none;
+  color: var(--text-primary);
+  transition: .2s ease;
+  margin-right: 2%;
+}
+
+.carousel-listitem .button.github svg {
+  margin-bottom: 1px;
+  margin-right: 9px;
+}
+
+.carousel-listitem .button.github span {
+  padding-right: 9px;
+}
+
+.carousel-listitem .button.github path {
+  transition: .2s ease;
+}
+
+.carousel-listitem .button.github:hover {
+  border: 2px solid var(--text-secondary);
+  /* background: var(--text-secondary); */
+  color: var(--text-secondary);
+  /* font-weight: 500; */
+}
+
+.carousel-listitem .button.github:hover path {
+  fill: var(--text-secondary);
+}
+
+.carousel-listitem .button.website {
+  background: var(--text-primary);
+  color: var(--bg-dark);
+  font-weight: 500;
+  margin-left: 2%;
+}
+
+.carousel-listitem .button.website svg {
+  transition: .2s ease;
+}
+
+.carousel-listitem .button.website:hover>svg {
+  transform: translate(-1.5px, 1.5px);
+}
+
+.carousel-listitem .button.website:hover {
+  background-color: var(--text-secondary)
+}
+
+.carousel-listitem .button.website:active>svg {
+  transform: translate(5px, -5px);
+}
+
+.carousel-listitem .carousel-body .carousel-itemlink {
+  text-decoration: none;
+}
+
+.carousel-body .carousel-listitem .carousel-hover-container {
+  opacity: 0;
+  transition: opacity .5s;
+  height: 100%;
+  width: 100%;
 }
