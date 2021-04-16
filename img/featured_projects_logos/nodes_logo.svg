@@ -1,0 +1,17 @@
+<svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+
+ <g>
+  <title>background</title>
+  <rect fill="#fff" id="canvas_background" height="502" width="502" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <g id="svg_7">
+   <path stroke="null" id="svg_6" fill="#0001F2" d="m-0.02758,43.92957a43.50104,43.50104 0 0 1 43.50104,-43.50104l109.75923,0c16.8971,0 32.28424,9.79672 39.43854,25.11196l180.34955,386.47616l38.53976,0l0,-324.56807l-52.52481,0l0,-87.02005l96.04382,0a43.50104,43.50104 0 0 1 43.50104,43.50104l0,411.60609a43.50104,43.50104 0 0 1 -43.50104,43.50104l-109.75923,0a43.50104,43.50104 0 0 1 -39.43854,-25.11196l-180.34955,-386.47616l-38.55774,0l0,324.56807l52.52481,0l0,87.02005l-96.02584,0a43.50104,43.50104 0 0 1 -43.50104,-43.50104l0,-411.60609z" clip-rule="evenodd" fill-rule="evenodd"/>
+  </g>
+ </g>
+</svg>
