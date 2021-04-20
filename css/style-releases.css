@@ -118,6 +118,15 @@
   color: var(--text-tertiary);
 }
 
+.release code {
+  font-family: monospace;
+  font-size: 1em;
+  background: var(--card-border);
+  padding: .1em .2em .2em .2em;
+  margin: 0 .1em;
+  border-radius: 3px;
+}
+
 .release .buttons {
   margin-top: 5vh;
   display: flex;
