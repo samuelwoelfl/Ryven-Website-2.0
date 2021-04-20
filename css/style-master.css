@@ -255,7 +255,7 @@ footer {
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  margin-top: 12%;
+  margin-top: 12vh;
 }
 
 footer .top {
