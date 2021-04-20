@@ -95,12 +95,23 @@
   font-weight: 600;
 }
 
+.release .inner .details p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25.5px;
+  color: var(--text-tertiary);
+}
+
 .release .inner .details ul {
   padding-left: 30px;
 }
 
 .release .inner .details li {
   margin-top: 1.5vh;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25.5px;
+  color: var(--text-tertiary);
 }
 
 .release .buttons {
