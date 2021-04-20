@@ -51,6 +51,7 @@
   padding-left: 25px;
   border-left: 3px solid var(--text-tertiary);
   padding-bottom: 4vh;
+  width: 100%;
 }
 
 .release .date {
@@ -106,6 +107,9 @@
   padding-left: 30px;
 }
 
+/* .release .inner .details ul+p {
+  padding-top: 30px;
+} */
 .release .inner .details li {
   margin-top: 1.5vh;
   font-weight: 400;
