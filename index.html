@@ -972,15 +972,33 @@
             <p class="emphasized-text">Design, of course, plays a huge role. Therefore, Ryven offers a variety of different flow designs.</p>
             <h3>Try some themes</h3>
             <div class="buttons">
-              <div id="theme1" class="active">Dark-Std</div>
-              <div id="theme2">Dark-Tron</div>
-              <div id="theme3">Ghostly</div>
-              <div id="theme4">Blender</div>
+              <div id="theme1" class="theme-button active">Dark-Std</div>
+              <div id="theme2" class="theme-button">Dark-Tron</div>
+              <div id="theme3" class="theme-button">Ghostly</div>
+              <div id="theme4" class="theme-button">Blender</div>
             </div>
           </div>
           <div class="presentation-container">
-            <img src="img/node_manager_screenshot.png" width="560" height="382" alt="">
+            <img id="theme_image" src="img/node_manager_screenshot.png" width="560" height="382" alt="">
           </div>
+          <script type="text/javascript">
+            var theme_image = $("#theme_image");
+
+            $('.theme-button').click(function() {
+              $('.theme-button').removeClass("active");
+              $(this).addClass("active");
+              console.log($(this).attr('id'));
+              if ($(this).attr('id') === "theme1") {
+                theme_image.attr("src", "img/node_manager_screenshot.png");
+              } else if ($(this).attr('id') === "theme2") {
+                theme_image.attr("src", "img/interface_dark.jpg");
+              } else if ($(this).attr('id') === "theme3") {
+                theme_image.attr("src", "img/node_manager_screenshot.png");
+              } else {
+                theme_image.attr("src", "img/interface_dark.jpg");
+              }
+            })
+          </script>
         </div>
 
         <div class="feature-container">
