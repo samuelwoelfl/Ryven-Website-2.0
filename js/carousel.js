@@ -16,9 +16,7 @@ function recCarouselEvents() {
   var visibleItems = visibleWidth / singleItemWidth;
   var widthToScroll = Math.round(fullWidth - visibleWidth - margin);
   var translateInrcem = widthToScroll / Math.round((itemsCount / 3));
-  console.log("Full Width: ", fullWidth);
-  console.log("visibleWidth: ", visibleWidth);
-  console.log("Width to scroll: ", widthToScroll);
+
 
   $('.carousel-prev-rec').click(function() {
     if (recTranslate < -1) {
@@ -29,7 +27,6 @@ function recCarouselEvents() {
         $('.carousel-prev-rec').removeClass("active");
       }
     }
-    console.log(recTranslate);
   })
 
   $('.carousel-next-rec').click(function() {
@@ -41,6 +38,5 @@ function recCarouselEvents() {
         $('.carousel-next-rec').removeClass("active");
       }
     }
-    console.log(recTranslate);
   });
 }
