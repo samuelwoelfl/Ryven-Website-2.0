@@ -349,15 +349,29 @@
   border-radius: 4px;
   background-color: var(--bg-emphasize);
   transition: background-color .2s ease, transform .1 ease;
+  opacity: .8;
 }
 
-.carousel-button:hover {
+.carousel-button.active {
+  opacity: 1;
+}
+
+.carousel-button.active:hover {
   cursor: pointer;
   background-color: var(--bg-dark);
 }
 
-.carousel-button:active {
+.carousel-button.active:active {
   transform: scale(0.96);
+}
+
+.carousel-button svg {
+  opacity: .2;
+  transition: .2s ease;
+}
+
+.carousel-button.active svg {
+  opacity: 1;
 }
 
 .carousel-next-rec svg {
@@ -386,7 +400,8 @@
   float: left;
   margin-right: 26px;
   background-color: var(--bg-emphasize);
-  width: 360px;
+  /* width: 320px; */
+  min-width: 320px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

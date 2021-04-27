@@ -3,37 +3,44 @@ window.onload = function() {
 }
 
 function recCarouselEvents() {
-  // RECOMMENDATION CAROUSELS
   var recTranslate = 0;
-  var recTranslateIncrem = 386 * 2;
-  var carRecsItems = $('.carousel-recs .carousel-listitem');
-  var carRecsItem = $(carRecsItems[0]);
-  var carRecsItemWidth = carRecsItem.outerWidth(true);
-  var carRecsRowWidth = (carRecsItemWidth * 4);
-  var carRecsMaxRowWidth = (carRecsItemWidth * carRecsItems.length);
+  var carouselList = $('.carousel-list');
+  var listItems = $('.carousel-recs .carousel-listitem');
+  var singleItem = $(listItems[0]);
+  var singleItemWidth = singleItem.outerWidth(true);
+  var singleItemWidthWithoutMargin = singleItem.outerWidth(false);
+  var margin = singleItemWidth - singleItemWidthWithoutMargin;
+  var itemsCount = listItems.length;
+  var fullWidth = Math.round((singleItemWidth * listItems.length));
+  var visibleWidth = $('.carousel-body').outerWidth(true);
+  var visibleItems = visibleWidth / singleItemWidth;
+  var widthToScroll = Math.round(fullWidth - visibleWidth - margin);
+  var translateInrcem = widthToScroll / Math.round((itemsCount / 3));
+  console.log("Full Width: ", fullWidth);
+  console.log("visibleWidth: ", visibleWidth);
+  console.log("Width to scroll: ", widthToScroll);
 
   $('.carousel-prev-rec').click(function() {
-    // PREV RECS
-    carRecsList = $('.carousel-list');
-    recTranslate += recTranslateIncrem;
-
-    if (recTranslate <= 0) {
-      carRecsList.css('transform', 'translatex(' + recTranslate + 'px)');
-    } else {
-      recTranslate = 0;
+    if (recTranslate < -1) {
+      recTranslate += translateInrcem;
+      carouselList.css('transform', 'translatex(' + recTranslate + 'px)');
+      $('.carousel-next-rec').addClass("active");
+      if (recTranslate > -1) {
+        $('.carousel-prev-rec').removeClass("active");
+      }
     }
+    console.log(recTranslate);
   })
 
   $('.carousel-next-rec').click(function() {
-    // NEXT RECS
-    carRecsList = $('.carousel-list');
-    recTranslate -= recTranslateIncrem;
-
-    if (recTranslate >= (recTranslateIncrem * -2)) {
-      carRecsList.css('transform', 'translatex(' + recTranslate + 'px)');
-    } else {
-      recTranslate = (recTranslateIncrem * -2);
+    if (recTranslate >= ((widthToScroll * -1) + 5)) {
+      recTranslate -= translateInrcem;
+      carouselList.css('transform', 'translatex(' + recTranslate + 'px)');
+      $('.carousel-prev-rec').addClass("active");
+      if (recTranslate <= ((widthToScroll * -1) + 5)) {
+        $('.carousel-next-rec').removeClass("active");
+      }
     }
-
+    console.log(recTranslate);
   });
 }
