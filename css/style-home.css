@@ -422,7 +422,7 @@
   transition: .2s ease;
 }
 
-.carousel-body .carousel-listitem:hover>img {
+.carousel-body .carousel-listitem:hover>.image {
   transform: translateY(-8px);
 }
 
@@ -430,11 +430,20 @@
   background-color: var(--bg-dark)
 }
 
-.carousel-listitem img {
+.carousel-listitem .image {
   width: 50%;
   margin: 35px;
   border-radius: 4px;
   transition: .3s ease;
+  min-height: 139px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-listitem img {
+  width: 100%;
 }
 
 .carousel-listitem .description {

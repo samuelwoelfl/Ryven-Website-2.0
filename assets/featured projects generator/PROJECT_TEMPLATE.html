@@ -1,15 +1,11 @@
-
 <div class="carousel-listitem card">
-  <img src="img/featured_projects_logos/{{logo}}" alt="">
+  <div class="image"><img src="img/featured_projects_logos/{{logo}}" alt=""></div>
   <div class="description">
     <h4>{{title}}</h4>
     <span class="body-text">{{description}}</span>
   </div>
-
   {% if github_url is not none or website_url is not none %}
-  
   <div class="buttons">
-
     {% if github_url %}
     <a href="{{github_url}}" class="button github">
       <svg xmlns="http://www.w3.org/2000/svg" width="26.325" height="25.675" viewBox="0 0 26.325 25.675">
@@ -19,7 +15,6 @@
       <span>GitHub</span>
     </a>
     {% endif %}
-
     {% if website_url %}
     <a href="{{website_url}}" class="button website">
       <span>Website</span>
@@ -29,9 +24,6 @@
       </svg>
     </a>
     {% endif %}
-
   </div>
-
   {% endif %}
-
 </div>
