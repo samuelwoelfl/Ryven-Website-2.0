@@ -433,7 +433,6 @@
 .carousel-listitem .image {
   width: 50%;
   margin: 35px;
-  border-radius: 4px;
   transition: .3s ease;
   min-height: 139px;
   display: flex;
@@ -444,6 +443,7 @@
 
 .carousel-listitem img {
   width: 100%;
+  border-radius: 4px;
 }
 
 .carousel-listitem .description {
