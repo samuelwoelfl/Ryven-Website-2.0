@@ -218,19 +218,29 @@
   height: 50px;
   padding: 0 30px;
   background-color: var(--bg-lighter);
+  background-size: 300%;
   color: var(--text-primary);
   border-radius: 5px;
-  transition: background-position .2s ease-in-out, transform .05s ease-in-out;
-  cursor: pointer;
+  transition: background-position .2s ease-in-out, transform .06s ease-in-out, background-color .2s ease;
   margin-right: 10px;
   white-space: nowrap;
 }
 
-.features .text-container .buttons>*.active {
-  background-image: linear-gradient(90deg, var(--primary), var(--primary-light), var(--primary-light), var(--primary));
+.features .text-container .buttons>*:not(.active):hover {
   background-size: 300%;
-  background-position: left;
   color: #ffffff;
+  background-color: var(--bg-dark);
+  cursor: pointer;
+}
+
+.features .text-container .buttons>*.active {
+  background-position: right;
+  background-image: linear-gradient(90deg, var(--primary), var(--primary-light), var(--primary-light), var(--primary));
+  color: #ffffff;
+}
+
+.features .text-container .buttons>*:not(.active):active {
+  transform: scale(0.96);
 }
 
 .features .presentation-container {
