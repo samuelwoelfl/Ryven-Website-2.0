@@ -23,7 +23,7 @@ pre[class*=language-] {
 }
 
 :not(pre)>code[class*=language-], pre[class*=language-] {
-  background: var(--bg-lighter);
+  background: none;
 }
 
 :not(pre)>code[class*=language-] {

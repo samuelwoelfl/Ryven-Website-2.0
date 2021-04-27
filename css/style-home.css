@@ -240,11 +240,6 @@
   width: 100%;
 }
 
-.features .presentation-container code span {
-  white-space: pre;
-  font-family: 'Consolas', Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-}
-
 .features .presentation-container .action-bar {
   width: 100%;
   height: 35px;
@@ -279,6 +274,46 @@
   font-family: 'Consolas', Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 }
 
+.features .presentation-container .window {
+  padding: 0 4%;
+  background: var(--bg-lighter);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.features .presentation-container code span {
+  white-space: pre;
+  font-family: 'Consolas', Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+
+/* #typewriter {}
+
+#typewriter:after {
+  content: "|";
+  color: var(--text-secondary);
+  -webkit-animation: blink 500ms linear infinite alternate;
+  animation: blink 500ms linear infinite alternate;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+} */
 /* ------------- Carousel ----------------- */
 .carousel {
   display: flex;
