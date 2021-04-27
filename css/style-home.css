@@ -223,6 +223,7 @@
   transition: background-position .2s ease-in-out, transform .05s ease-in-out;
   cursor: pointer;
   margin-right: 10px;
+  white-space: nowrap;
 }
 
 .features .text-container .buttons>*.active {
