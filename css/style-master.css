@@ -2,6 +2,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Consolas';
+  src: url('consolas.woff') format('woff'),
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url('consolas.ttf') format('truetype');
+  /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
+*:not(code) {
   font-family: var(--poppins);
 }
 
@@ -255,6 +266,7 @@ footer {
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
+  margin-top: 12vh;
 }
 
 footer .top {
