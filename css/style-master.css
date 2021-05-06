@@ -6,10 +6,8 @@
 
 @font-face {
   font-family: 'Consolas';
-  src: url('consolas.woff') format('woff'),
+  src: url('font/Consolas.woff') format('woff'),
     /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-    url('consolas.ttf') format('truetype');
-  /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
 }
 
 *:not(code) {
