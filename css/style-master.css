@@ -22,6 +22,15 @@ html, body {
 }
 
 :root {
+  /* Font/text values */
+  --poppins: 'Poppins', sans-serif, Arial;
+  /* Positioning */
+  --content-width: 95%;
+  --content-max-width: 1400px;
+  --header-hight: 70px;
+}
+
+:root[data-theme="theme-dark"] {
   /* Colors: */
   --primary: #F7503D;
   --primary-light: #EFAE74;
@@ -33,15 +42,11 @@ html, body {
   --text-secondary: #FFFFFFB3;
   --text-tertiary: #7B8898;
   --shadow-color: #00000059;
-  /* Font/text values */
-  --poppins: 'Poppins', sans-serif, Arial;
-  /* Positioning */
-  --content-width: 95%;
-  --content-max-width: 1400px;
-  --header-hight: 70px;
 }
 
-[data-theme=light] {
+:root[data-theme="theme-light"] {
+  --primary: #F7503D;
+  --primary-light: #EFAE74;
   --card-border: #00000012;
   --bg-emphasize: #E6DDD44D;
   --bg-dark: #fef8f1;
