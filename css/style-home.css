@@ -23,6 +23,8 @@
 
 .floating-elements {
   position: absolute;
+  width: 99vw;
+  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -34,7 +36,37 @@
 }
 
 .floating-elements svg {
-  overflow: visible;
+  position: absolute;
+}
+
+#floating_node_left_1 {
+  top: 1%;
+  left: 14%;
+}
+
+#floating_node_left_2 {
+  top: 11%;
+  left: -2%;
+}
+
+#floating_node_left_3 {
+  top: 38%;
+  left: 4%;
+}
+
+#floating_node_right_1 {
+  top: 0%;
+  right: 0%;
+}
+
+#floating_node_right_2 {
+  top: 13%;
+  right: 5%;
+}
+
+#floating_node_right_3 {
+  top: 46%;
+  right: 0%;
 }
 
 .new {

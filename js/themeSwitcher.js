@@ -30,42 +30,27 @@
 
 const sun = document.querySelector("svg.sun");
 const moon = document.querySelector("svg.moon");
+const landingpage = document.querySelector(".landingpage");
 
 const html = document.querySelector('html');
 const isOsDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 // html.dataset.theme = `theme-${isOsDark ? 'dark' : 'light'}`;
 
 if (isOsDark) {
-  sun.style.display = "none";
-  moon.style.display = "block";
-  html.dataset.theme = 'theme-dark';
+  switchTheme('dark');
 } else {
-  sun.style.display = "block";
-  moon.style.display = "none";
-  html.dataset.theme = 'theme-light';
+  switchTheme('light');
 }
-// function startListeningToOSTheme() {
-//   matchMediaPrefDark.addEventListener('change', onSystemThemeChange);
-// }
-//
-// function stopListeningToOSTheme() {
-//   matchMediaPrefDark.removeEventListener('change', onSystemThemeChange);
-// }
-
-// function onSystemThemeChange(e) {
-//   const isDark = e.matches;
-//   html.dataset.theme = `theme-${isDark ? 'dark' : 'light'}`;
-// }
 
 function switchTheme(theme) {
   if (theme === 'light') {
     sun.style.display = "block";
     moon.style.display = "none";
-    html.dataset.theme = 'theme-light';
+    landingpage.style.backgroundImage = "url('../img/BG-dots_light.png')";
   } else {
     sun.style.display = "none";
     moon.style.display = "block";
-    html.dataset.theme = 'theme-dark';
+    landingpage.style.backgroundImage = "url('../img/BG-dots.png')";
   }
-  // html.dataset.theme = `theme-${theme}`;
+  html.dataset.theme = `theme-${theme}`;
 }

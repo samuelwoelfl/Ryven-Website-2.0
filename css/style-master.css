@@ -40,6 +40,8 @@ html, body {
   --text-secondary: #FFFFFFB3;
   --text-tertiary: #7B8898;
   --shadow-color: #00000059;
+  --node-highlights: #282d32;
+  --node-inputs: rgba(255, 255, 255, 0.04);
 }
 
 :root[data-theme="theme-light"] {
@@ -53,6 +55,8 @@ html, body {
   --text-secondary: #161616B3;
   --text-tertiary: #4b4b4b;
   --shadow-color: #0000000f;
+  --node-highlights: #FFFFFF;
+  --node-inputs: rgba(0, 0, 0, 0.04);
 }
 
 /* Character Styles */
