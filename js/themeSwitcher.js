@@ -31,6 +31,9 @@
 const sun = document.querySelector("svg.sun");
 const moon = document.querySelector("svg.moon");
 const landingpage = document.querySelector(".landingpage");
+const node_shadow_opacity = document.querySelectorAll("feFlood");
+
+console.log(node_shadow_opacity);
 
 const html = document.querySelector('html');
 const isOsDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -47,10 +50,18 @@ function switchTheme(theme) {
     sun.style.display = "block";
     moon.style.display = "none";
     landingpage.style.backgroundImage = "url('../img/BG-dots_light.png')";
+    var i = node_shadow_opacity.length;
+    while (i--) {
+      node_shadow_opacity[i].setAttribute("flood-opacity", "0.07");
+    }
   } else {
     sun.style.display = "none";
     moon.style.display = "block";
     landingpage.style.backgroundImage = "url('../img/BG-dots.png')";
+    var i = node_shadow_opacity.length;
+    while (i--) {
+      node_shadow_opacity[i].setAttribute("flood-opacity", "0.231");
+    }
   }
   html.dataset.theme = `theme-${theme}`;
 }
