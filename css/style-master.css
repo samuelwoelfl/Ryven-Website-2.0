@@ -19,7 +19,7 @@ html, body {
   background: var(--bg-lighter);
 }
 
-:root {
+:root[data-theme="theme-light"] {
   /* Font/text values */
   --poppins: 'Poppins', sans-serif, Arial;
   /* Positioning */
