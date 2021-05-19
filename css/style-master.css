@@ -49,11 +49,11 @@ html, body {
   --primary-light: #EFAE74;
   --card-border: #00000012;
   --bg-emphasize: #E6DDD44D;
-  --bg-dark: #fef8f1;
+  --bg-dark: #f4f0eb;
   --bg-lighter: #fbf8f5;
   --text-primary: #161616;
   --text-secondary: #161616B3;
-  --text-tertiary: #4b4b4b;
+  --text-tertiary: #6e6e6e;
   --shadow-color: #0000000f;
   --node-highlights: #FFFFFF;
   --node-inputs: rgba(0, 0, 0, 0.04);
