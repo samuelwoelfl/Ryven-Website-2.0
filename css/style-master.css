@@ -109,6 +109,52 @@ h3 {
   margin-bottom: 10vh;
 }
 
+.fade {
+  transition: .6s cubic-bezier(0.13, 0.57, 0.56, 0.95);
+}
+
+.about.fade[data-scroll="out"] {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.about.fade[data-scroll="in"] {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay: .1s;
+}
+
+.feature-container:nth-child(even)>:first-child.fade[data-scroll="out"], .feature-container:nth-child(odd) .presentation-container.fade[data-scroll="out"] {
+  opacity: 0;
+  transform: translateX(100px);
+}
+
+.feature-container:nth-child(even)>:last-child.fade[data-scroll="out"], .feature-container:nth-child(odd) .text-container.fade[data-scroll="out"] {
+  opacity: 0;
+  transform: translateX(-100px);
+}
+
+.feature-container .fade[data-scroll="in"] {
+  opacity: 1;
+  transform: translateX(0px);
+  transition-delay: .1s;
+}
+
+.carousel-listitem.fade {
+  transition: .6s cubic-bezier(0.13, 0.57, 0.56, 0.95);
+}
+
+.carousel-listitem.fade[data-scroll="out"] {
+  opacity: 0;
+  transform: translateX(50px);
+}
+
+.carousel-listitem.fade[data-scroll="in"] {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay: .1s;
+}
+
 a {
   color: var(--text-secondary);
   text-decoration: none;

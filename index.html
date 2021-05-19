@@ -889,7 +889,7 @@
     </div>
 
     <div class="content-inner">
-      <div class="about card">
+      <div class="about card fade">
         <div class="heading top">
           <h2>Who is Ryven for?</h2>
           <span class="subheading">About this tool</span>
@@ -967,7 +967,7 @@
       <div class="content-inner">
 
         <div class="feature-container">
-          <div class="text-container">
+          <div class="text-container fade">
             <h2>Create clear and pretty flows</h2>
             <p class="emphasized-text">Design, of course, plays a huge role. Therefore, Ryven offers a variety of different flow designs.</p>
             <h3>Try some themes</h3>
@@ -978,7 +978,7 @@
               <div id="theme4" class="theme-button">Blender</div>
             </div>
           </div>
-          <div class="presentation-container">
+          <div class="presentation-container fade">
             <img id="theme_image" src="img/node_manager_screenshot.png" width="560" height="382" alt="">
           </div>
           <script type="text/javascript">
@@ -1002,12 +1002,12 @@
         </div>
 
         <div class="feature-container">
-          <div class="text-container">
+          <div class="text-container fade">
             <h2>Builtin interpreter</h2>
             <p class="emphasized-text">Ryven has a console with a complete builtin Python REPL, which is really useful, not only for developing nodes, but also for accessing internal data that is not provided as an output natively, for example. You
               can access a node's full API at any time through this console.</p>
           </div>
-          <div class="presentation-container">
+          <div class="presentation-container fade">
             <div class="action-bar">
               <div class="dots">
                 <div class="dot"></div>
@@ -1414,6 +1414,15 @@ def unify_number(number):
   </footer>
 
   <script src="js/themeSwitcher.js"></script>
+  <!-- <script src="js/flyin.js"></script> -->
+  <script src="js/scroll_out.js"></script>
+  <script type="text/javascript">
+    ScrollOut({
+      targets: '.fade',
+      once: true,
+      threshold: 0.4,
+    })
+  </script>
   <script src="js/carousel.js"></script>
   <script src="js/prism.js"></script>
   <!-- <script src="js/typewriter.js"></script> -->
