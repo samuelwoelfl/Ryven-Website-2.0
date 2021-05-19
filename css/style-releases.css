@@ -159,9 +159,10 @@
 .release .buttons .button.download svg {
   height: 40%;
   margin-right: 10px;
+  transition: .2s ease-out;
 }
 
-.release .buttons .button.download:hover svg {
+.release .buttons .button.download:active svg {
   margin-top: 5px;
 }
 
@@ -169,7 +170,7 @@
   background-position: right;
 }
 
-.release .buttons .button.download:active {
+.release .buttons .button:active {
   transform: scale(0.97);
   background-position: left;
 }
@@ -190,4 +191,23 @@
 
 .release .buttons .button.github span {
   padding-right: 9px;
+}
+
+.release .button.github span {
+  padding-right: 9px;
+}
+
+.release .button.github path {
+  transition: .2s ease;
+}
+
+.release .button.github:hover {
+  border: 2px solid var(--text-secondary);
+  /* background: var(--text-secondary); */
+  color: var(--text-secondary);
+  /* font-weight: 500; */
+}
+
+.release .button.github:hover path {
+  fill: var(--text-secondary);
 }
