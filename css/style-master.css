@@ -41,6 +41,8 @@ html, body {
   --text-tertiary: #7B8898;
   --shadow-color: #00000059;
   --node-highlights: #282d32;
+  --action-bar: #0C1115;
+  --action-bar-text: #282d32;
   --node-inputs: rgba(255, 255, 255, 0.04);
 }
 
@@ -56,6 +58,8 @@ html, body {
   --text-tertiary: #6e6e6e;
   --shadow-color: #0000000f;
   --node-highlights: #FFFFFF;
+  --action-bar: #E6DDD4ff;
+  --action-bar-text: #fff;
   --node-inputs: rgba(0, 0, 0, 0.04);
 }
 

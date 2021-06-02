@@ -167,7 +167,7 @@
 
 .about .inner .card {
   width: 48%;
-  padding: 3% 4%;
+  padding: 3% 4% 4% 4%;
   background-color: var(--bg-lighter);
   border-radius: 6px;
 }
@@ -175,11 +175,11 @@
 .about .card .heading {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
   height: 2em;
-  margin-bottom: 8%;
-  margin-top: 4%;
+  margin-bottom: 6%;
+  margin-top: 2%;
 }
 
 .about .card .heading svg {
@@ -289,6 +289,7 @@
   height: auto;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
+  border: 1px solid var(--card-border);
 }
 
 .features .presentation-container .action-bar {
@@ -298,7 +299,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--bg-dark);
+  background-color: var(--action-bar);
   padding: 0 3%;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
@@ -321,7 +322,7 @@
 }
 
 .features .presentation-container .action-bar .lang {
-  color: var(--bg-lighter);
+  color: var(--action-bar-text);
   font-family: 'Consolas', Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 }
 
@@ -330,11 +331,27 @@
   background: var(--bg-lighter);
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
+  border: 1px solid var(--card-border);
 }
 
 .features .presentation-container code span {
   white-space: pre;
   font-family: 'Consolas', Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+
+.features .about .inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.features .about .card .heading {
+  justify-content: center;
+}
+
+.features .about .card .body-text {
+  text-align: center;
 }
 
 /* #typewriter {}
