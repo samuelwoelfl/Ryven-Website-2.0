@@ -34,6 +34,13 @@ const landingpage = document.querySelector(".landingpage");
 const node_shadow_opacity = document.querySelectorAll("feFlood");
 const li_imgs = document.querySelectorAll(".carousel-listitem img.invert");
 const header = document.querySelector(".header.bg-dark");
+const stylus_image = document.querySelector("#stylus_image");
+const interface_image = document.querySelector(".interface");
+
+// const theme_buttons = document.querySelectorAll(".theme-button");
+// const theme_image = document.querySelector(".try-theme-image");
+// const default_theme_dark = document.querySelector("#theme1");
+// const default_theme_light = document.querySelector("#theme2");
 
 const html = document.querySelector('html');
 const isOsDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -47,12 +54,13 @@ if (isOsDark) {
 
 function switchTheme(theme) {
   if (theme === 'light') {
+
+    // Change Icon
     sun.style.display = "block";
     moon.style.display = "none";
+
+    // Custom Stuff
     header.setAttribute("style", "box-shadow: 0px 3px 35px #00000017");
-    try {
-      landingpage.style.backgroundImage = "url('../img/BG-dots_light.png')";
-    } catch (err) {}
     var z = node_shadow_opacity.length;
     while (z--) {
       node_shadow_opacity[z].setAttribute("flood-opacity", "0.07");
@@ -61,13 +69,32 @@ function switchTheme(theme) {
     while (i--) {
       li_imgs[i].setAttribute("style", "filter: invert(1)");
     }
+
+    // Change selected theme
+    // var i = theme_buttons.length;
+    // while (i--) {
+    // theme_buttons[i].classList.remove("active");
+    // }
+    // default_theme_light.classList.add("active");
+    // theme_image.setAttribute("src", "img/themes/themes_1_samuel1l.png");
+
+
+    // Change Images (new try for every page)
+    try {
+      landingpage.style.backgroundImage = "url('../img/BG-dots_light.png')";
+      stylus_image.setAttribute("src", "img/stylus_light.png");
+      interface_image.setAttribute("src", "img/screenshot_home_light.png");
+    } catch (err) {}
+
+
   } else {
+
+    // Change Icon
     sun.style.display = "none";
     moon.style.display = "block";
+
+    // Custom Stuff
     header.setAttribute("style", "box-shadow: 0px 3px 35px var(--shadow-color)");
-    try {
-      landingpage.style.backgroundImage = "url('../img/BG-dots.png')";
-    } catch (err) {}
     var z = node_shadow_opacity.length;
     while (z--) {
       node_shadow_opacity[z].setAttribute("flood-opacity", "0.231");
@@ -76,6 +103,17 @@ function switchTheme(theme) {
     while (i--) {
       li_imgs[i].setAttribute("style", "filter: invert(0)");
     }
+
+    // Change selected theme
+
+    // Change Images (new try for every page)
+    try {
+      landingpage.style.backgroundImage = "url('../img/BG-dots.png')";
+      stylus_image.setAttribute("src", "img/stylus_dark.png");
+      interface_image.setAttribute("src", "img/screenshot_home_dark.png");
+
+    } catch (err) {}
+
   }
   html.dataset.theme = `theme-${theme}`;
 }
