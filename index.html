@@ -971,15 +971,30 @@
             <h2>Create clear and pretty flows</h2>
             <p class="emphasized-text">Design, of course, plays a huge role. Therefore, Ryven offers a variety of different flow designs.</p>
             <h3>Try some themes</h3>
-            <div class="buttons">
-              <div id="theme1" class="theme-button active">Dark-Std</div>
-              <div id="theme2" class="theme-button">Dark-Tron</div>
-              <div id="theme3" class="theme-button">Ghostly</div>
+            <div class="buttons first_row">
+              <div id="theme1" class="theme-button active">Pure Dark</div>
+              <div id="theme2" class="theme-button">Pure Light</div>
+              <div id="theme3" class="theme-button">Simple</div>
               <div id="theme4" class="theme-button">Blender</div>
+            </div>
+            <div class="buttons second_row">
+              <div id="theme5" class="theme-button">Ghostly</div>
+              <div id="theme6" class="theme-button">Ueli</div>
+              <div id="theme7" class="theme-button">Tron</div>
+              <div id="theme8" class="theme-button">Toy</div>
             </div>
           </div>
           <div class="presentation-container fade">
-            <img id="theme_image" src="img/node_manager_screenshot.png" width="560" height="382" alt="">
+            <div class="action-bar">
+              <div class="dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+              <p class="lang">Ryven - Themes</p>
+            </div>
+            <img id="theme_image" src="img/themes/themes_1_samuel1d.png" width="560" height="382" alt="">
+
           </div>
           <script type="text/javascript">
             var theme_image = $("#theme_image");
@@ -989,13 +1004,21 @@
               $(this).addClass("active");
               console.log($(this).attr('id'));
               if ($(this).attr('id') === "theme1") {
-                theme_image.attr("src", "img/node_manager_screenshot.png");
+                theme_image.attr("src", "img/themes/themes_1_samuel1d.png");
               } else if ($(this).attr('id') === "theme2") {
-                theme_image.attr("src", "img/interface_dark.jpg");
+                theme_image.attr("src", "img/themes/themes_1_samuel1l.png");
               } else if ($(this).attr('id') === "theme3") {
-                theme_image.attr("src", "img/node_manager_screenshot.png");
-              } else {
-                theme_image.attr("src", "img/interface_dark.jpg");
+                theme_image.attr("src", "img/themes/themes_1_simple.png");
+              } else if ($(this).attr('id') === "theme4") {
+                theme_image.attr("src", "img/themes/themes_1_blender.png");
+              } else if ($(this).attr('id') === "theme5") {
+                theme_image.attr("src", "img/themes/themes_1_ghost.png");
+              } else if ($(this).attr('id') === "theme6") {
+                theme_image.attr("src", "img/themes/themes_1_ueli.png");
+              } else if ($(this).attr('id') === "theme7") {
+                theme_image.attr("src", "img/themes/themes_1_tron.png");
+              } else if ($(this).attr('id') === "theme8") {
+                theme_image.attr("src", "img/themes/themes_1_toy.png");
               }
             })
           </script>
@@ -1036,6 +1059,87 @@ def unify_number(number):
         number = number.replace('+', '00')
         landvorwahl = number[:4]
         number = number[4:].strip()
+                </code>
+              </pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature-container">
+          <div class="text-container fade">
+            <h2>Ryven Console</h2>
+            <p class="emphasized-text">After you sufficiently tested a flow, if the nodes you used are compatible with Ryven Console, you can then run your flow in Ryven Console without any GUI, on the server for example, with much higher
+              performance. This is useful for larger performance intensive data processing tasks.</p>
+          </div>
+          <div class="presentation-container fade">
+            <div class="action-bar">
+              <div class="dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+              <p class="lang">Python</p>
+            </div>
+            <div class="window">
+              <pre id="typewriter">
+                <code class="lang-python">
+34 <std__Checkpoint0.Checkpoint_Node object at 0x0000021ADFA5BE20>
+35 <std__Log0.Log_Node object at 0x0000021ADFA5BCD0>
+ref by index: 18
+--> obj: <std__Button0.Button_Node object at 0x0000021ADFA56C70>
+
+direct access:
+    session   - the ryvencore session instance
+    nodes     - get a list of all node objects
+    flows     - get a list of all flows
+    exit      - close the session
+
+obj.update()
+[480, 729, 646, 924, 773, 542, 6, 14, 131, 668]
+[6, 14, 131, 480, 542, 646, 668, 729, 773, 924]
+                </code>
+              </pre>
+            </div>
+          </div>
+        </div>
+        <div class="feature-container">
+          <div class="text-container fade">
+            <h2>Source code access and live mainpulation</h2>
+            <p class="emphasized-text">As Ryven tends to enhancing the textual representation with the visual one, instead of replacing it, you always have access to the source code implementation of the nodes you use. Furthermore, you can actually
+              change method implementations any time which makes debugging and enhancing nodes very fast.
+              This is a very strong feature.</p>
+          </div>
+          <div class="presentation-container fade">
+            <div class="action-bar">
+              <div class="dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+              <p class="lang">Python</p>
+            </div>
+            <div class="window">
+              <pre id="typewriter">
+                <code class="lang-python">
+class Eval_Node(NodeBase):
+    """Evaluates the input expression from the widget"""
+
+    title = 'eval'
+    init_inputs = [
+        # NodeInputBP(),
+    ]
+    init_outputs = [
+        NodeOutputBP(),
+    ]
+    main_widget_class = widgets.EvalNode_MainWidget
+    main_widget_pos = 'between ports'
+
+    def __init__(self, params):
+        super().__init__(params)
+
+        self.special_actions['add input'] = {
+            'method': self.add_param_input
+        }
                 </code>
               </pre>
             </div>

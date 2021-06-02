@@ -203,7 +203,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-content: center;
+  align-items: center;
   margin-bottom: 10vw;
 }
 
@@ -223,7 +223,6 @@
 }
 
 .features .text-container p {
-  margin-bottom: 2.5vw;
   width: 65%;
 }
 
@@ -233,6 +232,7 @@
 
 .features .text-container h3 {
   margin-bottom: 1.2vw;
+  margin-top: 2.5vw;
 }
 
 .features .text-container .buttons {
@@ -240,6 +240,10 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+}
+
+.features .text-container .buttons.first_row {
+  margin-bottom: 10px;
 }
 
 .features .text-container .buttons>* {
@@ -256,6 +260,7 @@
   transition: background-position .2s ease-in-out, transform .06s ease-in-out, background-color .2s ease;
   margin-right: 10px;
   white-space: nowrap;
+  flex-grow: 1;
 }
 
 .features .text-container .buttons>*:not(.active):hover {
@@ -281,6 +286,9 @@
 
 .features .presentation-container img {
   width: 100%;
+  height: auto;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 .features .presentation-container .action-bar {
