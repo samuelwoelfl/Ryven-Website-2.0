@@ -112,12 +112,12 @@
 
 .main .ctas .download {
   margin-right: 5px;
-  width: 300px;
+  /* width: 300px; */
 }
 
 .main .ctas .github {
   margin-left: 5px;
-  width: 300px;
+  /* width: 300px; */
 }
 
 .main .presentation {
@@ -632,4 +632,14 @@ h2.carousel_heading {
   transition: opacity .5s;
   height: 100%;
   width: 100%;
+}
+
+@media only screen and (max-width: 990px) {
+  .floating-elements {
+    display: none;
+  }
+
+  .features .text-container .buttons {
+    flex-wrap: wrap;
+  }
 }

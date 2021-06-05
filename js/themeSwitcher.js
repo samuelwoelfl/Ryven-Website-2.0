@@ -53,6 +53,7 @@ if (isOsDark) {
 }
 
 function switchTheme(theme) {
+  console.log("got here");
   if (theme === 'light') {
 
     // Change Icon
