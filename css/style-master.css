@@ -113,6 +113,10 @@ h3 {
   margin-bottom: 10vh;
 }
 
+[class*="button"] {
+  user-select: none;
+}
+
 .fade {
   transition: .6s cubic-bezier(0.13, 0.57, 0.56, 0.95);
 }
