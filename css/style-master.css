@@ -547,20 +547,20 @@ footer .social a:active {
     display: none !important;
   }
 
-  h1, h2, h3, h4, p, a {
-    white-space: pre;
+  h1, h2, h3, h4, p, a, pre, code {
+    white-space: pre !important;
     /* CSS 2.0 */
-    white-space: pre-wrap;
+    white-space: pre-wrap !important;
     /* CSS 2.1 */
-    white-space: pre-line;
+    white-space: pre-line !important;
     /* CSS 3.0 */
-    white-space: -pre-wrap;
+    white-space: pre-wrap !important;
     /* Opera 4-6 */
-    white-space: -o-pre-wrap;
+    white-space: -o-pre-wrap !important;
     /* Opera 7 */
-    white-space: -moz-pre-wrap;
+    white-space: -moz-pre-wrap !important;
     /* Mozilla */
-    word-wrap: break-word;
+    word-wrap: break-word !important;
     /* IE 5+ */
   }
 
@@ -571,10 +571,10 @@ footer .social a:active {
   }
 
   .subheading {
-    font-weight: 400;
-    font-size: 16px !important;
-    line-height: 12px;
-    color: var(--text-tertiary);
+    font-weight: 400 !important;
+    font-size: 18px !important;
+    line-height: 30px !important;
     margin-top: 7%;
+    margin-bottom: 5%;
   }
 }
