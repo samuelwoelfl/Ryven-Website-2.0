@@ -387,9 +387,16 @@
   }
 } */
 /* ------------- Carousel ----------------- */
+h2.carousel_heading {
+  width: var(--content-width);
+  max-width: var(--content-max-width);
+  text-align: center;
+  margin: 3vh 0 8vh 0;
+}
+
 .carousel {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   width: var(--content-width);
