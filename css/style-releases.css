@@ -211,3 +211,49 @@
 .release .button.github:hover path {
   fill: var(--text-secondary);
 }
+
+@media only screen and (max-width: 990px) {
+  .release {
+    width: var(--content-width);
+  }
+
+  .release .container {
+    margin-left: -30px;
+    width: auto;
+  }
+
+  .release .content {
+    padding-left: 15px;
+  }
+
+  .release .bullet {
+    width: 16px;
+    margin-right: 85px;
+  }
+
+  .release:first-child .version::after {
+    display: none;
+  }
+
+  .release .inner {
+    padding: 5vw 6vw;
+  }
+
+  .release .buttons {
+    flex-direction: column;
+  }
+
+  .release .buttons .button {
+    width: 100%;
+  }
+
+  .release .buttons .button.download {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .release .buttons .button.github {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
