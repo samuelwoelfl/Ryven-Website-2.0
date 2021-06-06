@@ -414,8 +414,7 @@ header .desktop-navigation .github a, .theme-switch {
   top: calc(-1* ((72px / 2) + -12px));
   width: 100vw;
   height: 100vh;
-  padding: 2em;
-  padding-top: 6em;
+  padding: 6em 2em 6em 2em;
   background-color: var(--bg-dark);
   transform-origin: 0% 0%;
   transform: translate(+15%, 0);
