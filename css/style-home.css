@@ -4,7 +4,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  background-image: url("./img/BG-dots.png");
+  background-image: url("../img/BG-dots.png");
   background-position: top;
   background-repeat: no-repeat;
   background-size: contain;
