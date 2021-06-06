@@ -16,6 +16,7 @@
 
 html, body {
   width: 100%;
+  height: 100%;
   background: var(--bg-lighter);
 }
 
@@ -23,7 +24,7 @@ html, body {
   /* Font/text values */
   --poppins: 'Poppins', sans-serif, Arial;
   /* Positioning */
-  --content-width: 92%;
+  --content-width: 90%;
   --content-max-width: 1400px;
   --header-hight: 70px;
 }
@@ -492,30 +493,30 @@ footer .bottom .logo, footer .bottom .social {
   width: 14%;
 }
 
-footer .bottom .desktop-navigation {
+footer .bottom .navigation {
   display: flex;
   flex-direction: row;
   align-items: center;
   color: var(--text-secondary);
 }
 
-footer .desktop-navigation .standard {
+footer .navigation .standard {
   padding-right: 1vw;
   border-right: 1px solid var(--card-border);
 }
 
-footer .desktop-navigation .extra {
+footer .navigation .extra {
   padding-left: 1vw;
 }
 
-footer .desktop-navigation a {
+footer .navigation a {
   margin: 0 1em;
   transition: .1s ease;
   font-size: 15px;
   text-align: center;
 }
 
-footer .desktop-navigation a:hover {
+footer .navigation a:hover {
   color: var(--text-primary);
 }
 
@@ -547,7 +548,7 @@ footer .social a:active {
     display: none !important;
   }
 
-  h1, h2, h3, h4, p, a, pre, code {
+  h1, h2, h3, h4, a, pre, code {
     white-space: pre !important;
     /* CSS 2.0 */
     white-space: pre-wrap !important;
@@ -565,9 +566,13 @@ footer .social a:active {
   }
 
   h1 {
-    font-weight: 600;
-    font-size: 38px;
-    line-height: 52px;
+    font-weight: 600 !important;
+    font-size: 38px !important;
+    line-height: 52px !important;
+  }
+
+  .emphasized-text {
+    margin-top: 2vh;
   }
 
   .subheading {
@@ -576,5 +581,51 @@ footer .social a:active {
     line-height: 30px !important;
     margin-top: 7%;
     margin-bottom: 5%;
+  }
+
+  footer .top {
+    flex-direction: column;
+  }
+
+  footer .top>* {
+    width: 100%;
+  }
+
+  footer .left {
+    margin-bottom: 5vh;
+  }
+
+  footer .navigation .standard {
+    display: none;
+  }
+
+  footer .logo {
+    display: none;
+  }
+
+  footer .navigation .extra {
+    padding-left: 0;
+  }
+
+  footer .navigation .extra a:first-child {
+    margin-left: 0;
+  }
+
+  footer .bottom .social {
+    width: 18%;
+  }
+
+  footer .social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  footer .social .youtube {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
 }
