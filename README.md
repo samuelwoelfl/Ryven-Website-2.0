@@ -1,4 +1,4 @@
-<center><img src="./img/docs/logo.png" style="max-width: 500px" /></center>
+<center><img class="docs-logo" src="img/docs/logo_white.png" style="max-width: 500px" /></center>
 
 ## Project Idea
 
@@ -24,13 +24,13 @@ Unlike most other flow-based visual scripting editors, Ryven supports 'data conn
 >
 > In a data flow, every change of data (which means that a data output of a node has been changed via `self.set_output_val()`) gets forward propagated and causes an update event in all connected nodes. In the example below, changing the slider value would therefore cause immediate updates and a visible change in the result node on the right.
 >
-> <center><img class="logo" src="./img/docs/data_flow_example.png" style="max-width: 900px" /></center>
+> <center><img src="img/docs/data_flow_example.png" style="max-width: 900px" /></center>
 >
 > ### Exec Flows
 >
 > In execution flows, data isn't forward propagated on change, but generated on request (backwards), only causing update events in affected nodes once the data of an output is requested somewhere (through `self.input()` in a node). In the example above, changing the slider value would not lead to a change in the result node, but if an active node requested this data, like shown below, then the whole expression gets executed.
 >
-> <center><img src="./img/docs/exec_flow_example.png" style="max-width: 900px" /></center>
+> <center><img src="img/docs/exec_flow_example.png" style="max-width: 900px" /></center>
 >
 > The data flow paradigm is the more important and fundamental one, and there might be changes for the exec mode in the future.
 >
@@ -298,7 +298,7 @@ Simply use `export_nodes()` to define the nodes you want to expose to Ryven. And
 
 After importing the nodes package in Ryven, it looks like this:
 
-<center><img src="./img/docs/mypackage_flow.png" style="max-width: 800px" /></center>
+<center><img src="img/docs/mypackage_flow.png" style="max-width: 800px" /></center>
 
 ### Custom Widgets
 
@@ -400,7 +400,7 @@ export_nodes(
 )
 ```
 
-<center><img src="./img/docs/custom_widgets_example.png" style="max-width: 800px" /></center>
+<center><img src="img/docs/custom_widgets_example.png" style="max-width: 800px" /></center>
 
 When importing the nodes package in ryven console, `import_widgets(__file__)` does not actually import anything, so the widget classes don't get parsed at all so there is no Qt dependency then, and when trying to access them in the `widgets` object, it just just responds with `None`.
 

@@ -215,6 +215,12 @@ a {
   color: var(--bg-dark)
 }
 
+.secondary-button:active {
+  transform: scale(0.97);
+  background-color: var(--text-primary);
+  color: var(--bg-dark)
+}
+
 .content-inner {
   width: var(--content-width);
   max-width: var(--content-max-width);

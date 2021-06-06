@@ -1,31 +1,3 @@
-// const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
-// const currentTheme = localStorage.getItem('theme');
-
-//
-// if (currentTheme) {
-//   document.documentElement.setAttribute('data-theme', currentTheme);
-//
-//   if (currentTheme === 'dark') {
-//     toggleSwitch.checked = true;
-//     sun.style.display = "none";
-//   }
-// }
-//
-// function switchTheme(e) {
-//   if (e.target.checked) {
-//     document.documentElement.setAttribute('data-theme', 'dark');
-//     localStorage.setItem('theme', 'dark');
-//     sun.style.display = "none";
-//     moon.style.display = "block";
-//   } else {
-//     document.documentElement.setAttribute('data-theme', 'light');
-//     localStorage.setItem('theme', 'light');
-//     sun.style.display = "block";
-//     moon.style.display = "none";
-//   }
-// }
-//
-// toggleSwitch.addEventListener('change', switchTheme, false);
 // https://medium.com/swlh/dark-mode-using-css-variables-cf065a7fa133#:~:text=For%20example%2C%20--text-color%20in%20light%20mode%20can%20be,colors%20or%20shades%20of%20colors%20for%20new%20views.
 
 const sun = document.querySelector("svg.sun");
@@ -36,6 +8,9 @@ const li_imgs = document.querySelectorAll(".carousel-listitem img.invert");
 const header = document.querySelector(".header.bg-dark");
 const stylus_image = document.querySelector("#stylus_image");
 const interface_image = document.querySelector(".interface");
+
+console.log(document.querySelector(".docs-logo"));
+
 
 // const theme_buttons = document.querySelectorAll(".theme-button");
 // const theme_image = document.querySelector(".try-theme-image");
@@ -53,7 +28,6 @@ if (isOsDark) {
 }
 
 function switchTheme(theme) {
-  console.log("got here");
   if (theme === 'light') {
 
     // Change Icon
@@ -86,6 +60,10 @@ function switchTheme(theme) {
       stylus_image.setAttribute("src", "img/stylus_light.png");
       interface_image.setAttribute("src", "img/screenshot_home_light.png");
     } catch (err) {}
+    try {
+      const docs_logo = document.querySelector(".docs-logo");
+      docs_logo.setAttribute("src", "./img/docs/logo.png");
+    } catch (err) {}
 
 
   } else {
@@ -113,6 +91,10 @@ function switchTheme(theme) {
       stylus_image.setAttribute("src", "img/stylus_dark.png");
       interface_image.setAttribute("src", "img/screenshot_home_dark.png");
 
+    } catch (err) {}
+    try {
+      const docs_logo = document.querySelector(".docs-logo");
+      docs_logo.setAttribute("src", "./img/docs/logo_white.png");
     } catch (err) {}
 
   }
