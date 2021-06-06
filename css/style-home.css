@@ -4,7 +4,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  background-image: url("../img/BG-dots.png");
+  background-image: url("./img/BG-dots.png");
   background-position: top;
   background-repeat: no-repeat;
   background-size: contain;
@@ -59,12 +59,12 @@
 }
 
 #floating_node_right_2 {
-  top: 13%;
+  top: 12%;
   right: 5%;
 }
 
 #floating_node_right_3 {
-  top: 46%;
+  top: 47%;
   right: 0%;
 }
 
@@ -94,7 +94,7 @@
 
 .main .subheading {
   margin-top: 5%;
-  max-width: 800px;
+  max-width: 750px;
   font-size: 20px;
   line-height: 35px;
   color: var(--text-secondary);
@@ -122,9 +122,24 @@
   /* width: 300px; */
 }
 
+.ctas .download svg {
+  height: 40%;
+  margin-right: 15px;
+}
+
 .main .ctas .github {
   margin-left: 5px;
   /* width: 300px; */
+}
+
+.ctas .github svg {
+  margin-right: 15px;
+  height: 60%;
+  margin-bottom: 2px;
+}
+
+.ctas .github svg path {
+  fill: var(--text-primary);
 }
 
 .main .presentation {
@@ -536,6 +551,7 @@ h2.carousel_heading {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  width: 80%;
 }
 
 .carousel-listitem .description h4 {

@@ -215,6 +215,14 @@ a {
   color: var(--bg-dark)
 }
 
+.secondary-button path {
+  transition: .1s ease-in-out;
+}
+
+.secondary-button:hover path {
+  fill: var(--bg-dark) !important;
+}
+
 .secondary-button:active {
   transform: scale(0.97);
   background-color: var(--text-primary);

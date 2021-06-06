@@ -182,12 +182,22 @@
           <h1>Flow-based visual scripting for Python</h1>
           <span class="subheading">A simple visual scripting environment for Python providing a diagram-like structure for an intuitive interface while your nodes can execute any python code.</span>
           <div class="ctas">
-            <div class="download primary-button">
+            <a class="download primary-button" href="releases">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18.686" height="21.572" viewBox="0 0 18.686 21.572">
+                <g id="downloadicon" transform="translate(1 1)">
+                  <path id="layer2" d="M24,20.9l3.354,3.773L30.708,20.9M27.354,10V24.674" transform="translate(-19.011 -10)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" />
+                  <path id="layer1" d="M12,54H28.686" transform="translate(-12 -34.428)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" />
+                </g>
+              </svg>
               <span class="text">Download now</span>
-            </div>
-            <div class="github secondary-button">
+            </a>
+            <a class="github secondary-button" href="https://github.com/leon-thomm/Ryven" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26.325" height="25.675" viewBox="0 0 26.325 25.675">
+                <path id="git_icon" d="M13.162,0A13.163,13.163,0,0,0,9,25.65c.658.115.9-.28.9-.625,0-.313-.016-1.349-.016-2.451-3.307.609-4.163-.806-4.426-1.547a4.786,4.786,0,0,0-1.349-1.859c-.461-.247-1.119-.856-.016-.872A2.634,2.634,0,0,1,6.12,19.645a2.813,2.813,0,0,0,3.834,1.086,2.769,2.769,0,0,1,.839-1.76c-2.929-.329-5.989-1.464-5.989-6.5A5.122,5.122,0,0,1,6.153,8.934a4.73,4.73,0,0,1,.132-3.488S7.387,5.1,9.9,6.8a12.409,12.409,0,0,1,6.581,0c2.517-1.711,3.62-1.349,3.62-1.349a4.73,4.73,0,0,1,.132,3.488,5.093,5.093,0,0,1,1.349,3.537c0,5.051-3.077,6.17-6.005,6.5a3.117,3.117,0,0,1,.888,2.435c0,1.76-.016,3.175-.016,3.62,0,.346.247.757.9.625A13.169,13.169,0,0,0,13.162,0Z"
+                  transform="translate(0 0)" fill="var(--text-secondary)" fill-rule="evenodd" />
+              </svg>
               <span class="text">Visit GitHub repository</span>
-            </div>
+            </a>
           </div>
           <div class="presentation">
             <img class="interface" src="img/screenshot_home_dark.png" alt="Ryven Interface" width="1156" height="633">
@@ -978,7 +988,9 @@
               </svg>
               <h3>What is Ryven</h3>
             </div>
-            <p class="body-text">Ryven enables using the more diagram-like dataflow inspired structure to represent functionality. Each node <i>runs</i> code and Ryven provides a simple system to create those and add intuitive GUI. Use cases range almost through the whole Python domain, from IoT, over any kind of data processing, machine learning, generative engineering, Raspberry Pi, web APIs, and much more. You should know the Python programming language and its basic concepts.</p>
+            <p class="body-text">Ryven enables using the more diagram-like dataflow inspired structure to represent functionality. Each node <i>runs</i> code and Ryven provides a simple system to create those and add intuitive GUI. Use cases range
+              almost through the whole Python domain, from IoT, over any kind of data processing, machine learning, generative engineering, Raspberry Pi, web APIs, and much more. You should know the Python programming language and its basic
+              concepts.</p>
           </div>
           <div class="card">
             <div class="heading">
@@ -1008,7 +1020,9 @@
               </svg>
               <h3>What it's not</h3>
             </div>
-            <p class="body-text">A tool to learn conventional programming or to generally program in Python. It does not automatically generate graphs out of existing code. It does not try to replace source code. Both representations have their domains and, even though it enables significant abstraction, Ryven tries to make them work <i>together</i>. Also, Ryven is not a professional piece of software and it's still receiving quite active development and sometimes major changes.</p>
+            <p class="body-text">A tool to learn conventional programming or to generally program in Python. It does not automatically generate graphs out of existing code. It does not try to replace source code. Both representations have their
+              domains and, even though it enables significant abstraction, Ryven tries to make them work <i>together</i>. Also, Ryven is not a professional piece of software and it's still receiving quite active development and sometimes major
+              changes.</p>
           </div>
         </div>
       </div>
@@ -1076,7 +1090,8 @@
         <div class="feature-container">
           <div class="text-container fade">
             <h2>Built-in Interpreter</h2>
-            <p class="emphasized-text">Using the built-in REPL you also have access to the backend session and you can use its whole API as well as access your nodes. Any modifications - like creating/renaming/deleting new scripts - will reactively be processed by the frontend automatically, so you can really do <i>everything</i> from the console.</p>
+            <p class="emphasized-text">Using the built-in REPL you also have access to the backend session and you can use its whole API as well as access your nodes. Any modifications - like creating/renaming/deleting new scripts - will reactively
+              be processed by the frontend automatically, so you can really do <i>everything</i> from the console.</p>
           </div>
           <div class="presentation-container fade">
             <div class="action-bar">
@@ -1099,7 +1114,7 @@ node = obj
 node.create_output(label='additional data')
 node.set_output_val(1, 'test')
 session.scripts
-[< ryvencore.Script.Script object at 0x0000022ED9567910 >, 
+[< ryvencore.Script.Script object at 0x0000022ED9567910 >,
 < ryvencore.MacroScript.MacroScript object at 0x0000022EDEFC0BB0 >]
 flow = session.scripts[0].flow
 flow.create_node(node.__class__)
@@ -1114,7 +1129,8 @@ flow.remove_node(flow.nodes[-1])
         <div class="feature-container">
           <div class="text-container fade">
             <h2>Ryven Console</h2>
-            <p class="emphasized-text">You can use Ryven Console to run your projects directly on the backend without any frontend dependencies. This enables more flexible deployment of your scripts and provides higher performance which can be useful for automation and larger intensive data processing tasks.</p>
+            <p class="emphasized-text">You can use Ryven Console to run your projects directly on the backend without any frontend dependencies. This enables more flexible deployment of your scripts and provides higher performance which can be
+              useful for automation and larger intensive data processing tasks.</p>
           </div>
           <div class="presentation-container fade">
             <div class="action-bar">
@@ -1150,7 +1166,8 @@ obj.update()
         <div class="feature-container">
           <div class="text-container fade">
             <h2>Source Code Access</h2>
-            <p class="emphasized-text">As Ryven tries to enhance the textual representation, you always have access to the source code implementation of the nodes you use inside the editor. Furthermore, in some cases you can temporarily change method implementations.</p>
+            <p class="emphasized-text">As Ryven tries to enhance the textual representation, you always have access to the source code implementation of the nodes you use inside the editor. Furthermore, in some cases you can temporarily change
+              method implementations.</p>
           </div>
           <div class="presentation-container fade">
             <div class="action-bar">
@@ -1216,7 +1233,9 @@ class Eval_Node(NodeBase):
               <div class="heading">
                 <h3>Philosophy</h3>
               </div>
-              <p class="body-text">Ryven is not a professional piece of software, and that's also not the aim. It's a hobby project mainly developed by one student. However, it repeatedly turned out to be useful for a wide range of different applications, not only but including educational purposes. And to make it accessible for anyone, it is free and open source. I've put quite some effort in making it great but it's not perfect and future, long-term development can only be driven by contributions.</p>
+              <p class="body-text">Ryven is not a professional piece of software, and that's also not the aim. It's a hobby project mainly developed by one student. However, it repeatedly turned out to be useful for a wide range of different
+                applications, not only but including educational purposes. And to make it accessible for anyone, it is free and open source. I've put quite some effort in making it great but it's not perfect and future, long-term development can
+                only be driven by contributions.</p>
             </div>
           </div>
         </div>
