@@ -548,7 +548,7 @@ footer .social a:active {
     display: none !important;
   }
 
-  h1, h2, h3, h4, a, pre, code {
+  test {
     white-space: pre !important;
     /* CSS 2.0 */
     white-space: pre-wrap !important;
@@ -581,6 +581,11 @@ footer .social a:active {
     line-height: 30px !important;
     margin-top: 7%;
     margin-bottom: 5%;
+  }
+
+  .feature-container:nth-child(even)>:first-child.fade[data-scroll="out"], .feature-container:nth-child(odd) .presentation-container.fade[data-scroll="out"] {
+    opacity: 0;
+    transform: translateX(-100px);
   }
 
   footer .top {

@@ -179,7 +179,7 @@
 .about .card .heading {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   height: 2em;
   margin-bottom: 6%;
@@ -482,7 +482,7 @@ h2.carousel_heading {
 
 .carousel-body .carousel-list {
   padding-left: 0;
-  width: 3202px;
+  /* width: 3202px; */
   transition: transform .7s;
   display: flex;
   flex-direction: row;
@@ -676,6 +676,10 @@ h2.carousel_heading {
     margin-left: 0;
   }
 
+  .about {
+    padding: 10% 5% 5% 5%;
+  }
+
   .about .inner {
     flex-direction: column;
   }
@@ -686,25 +690,8 @@ h2.carousel_heading {
     margin-bottom: 20px;
   }
 
-  /* .features {
-    display: none;
-  } */
-  .presentation-container {
-    display: none;
-  }
-
-  .features .feature-container:nth-child(1) {
-    display: none !important;
-  }
-
-  /* .features .feature-container:nth-child(2) {
-    display: none !important;
-  } */
-  /* .features .feature-container:nth-child(3) {
-    display: none !important;
-  } */
-  .features .feature-container:nth-child(4) {
-    display: none !important;
+  .features {
+    overflow: hidden;
   }
 
   .features .feature-container {
@@ -719,6 +706,10 @@ h2.carousel_heading {
   .features .presentation-container {
     width: 100%;
     margin-bottom: 15vh;
+  }
+
+  .features .text-container .buttons>*:nth-child(even) {
+    margin-right: 0;
   }
 
   #theme6 {
@@ -737,15 +728,11 @@ h2.carousel_heading {
     display: none;
   }
 
-  .carousel {
-    display: none;
-  }
-
   .carousel-body .carousel-listitem {
     margin-right: 16px;
     background-color: var(--bg-emphasize);
-    width: auto !important;
-    min-width: auto !important;
+    min-width: 70vw !important;
+    max-width: 80vw !important;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -755,8 +742,13 @@ h2.carousel_heading {
   }
 
   .carousel-listitem .image {
-    display: none;
-    width: 20%;
+    /* display: none; */
+    width: 50%;
+    margin: 5px 5px 25px 5px;
+  }
+
+  .carousel-listitem .description span {
+    width: 100%;
   }
 
   .carousel-listitem .buttons {
