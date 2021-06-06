@@ -1,4 +1,4 @@
-<center><img src="./images/logo.png" style="max-width: 500px" /></center>
+<center><img src="./img/docs/logo.png" style="max-width: 500px" /></center>
 
 ## Project Idea
 
@@ -19,21 +19,21 @@ A **Script** contains a **Flow**, a **Logger**, and a **Variables Manager**. The
 Unlike most other flow-based visual scripting editors, Ryven supports 'data connections' *and* 'exec connections'. Data connections transmit data from one node to another, and exec connections only transmit a 'trigger' signal. Pure data flows (only data connections) are like the UE4 Material Editor, while exec flows (some exec connections) are more like the UE4 BluePrints.
 
 > *If you don't have experience with the flow-based programming idea already you can skip this, these differences don't really matter for now.*
-> 
+>
 > ### Data Flows
-> 
+>
 > In a data flow, every change of data (which means that a data output of a node has been changed via `self.set_output_val()`) gets forward propagated and causes an update event in all connected nodes. In the example below, changing the slider value would therefore cause immediate updates and a visible change in the result node on the right.
-> 
-> <center><img src="./images/data_flow_example.png" style="max-width: 900px" /></center>
-> 
+>
+> <center><img class="logo" src="./img/docs/data_flow_example.png" style="max-width: 900px" /></center>
+>
 > ### Exec Flows
-> 
+>
 > In execution flows, data isn't forward propagated on change, but generated on request (backwards), only causing update events in affected nodes once the data of an output is requested somewhere (through `self.input()` in a node). In the example above, changing the slider value would not lead to a change in the result node, but if an active node requested this data, like shown below, then the whole expression gets executed.
-> 
-> <center><img src="./images/exec_flow_example.png" style="max-width: 900px" /></center>
-> 
+>
+> <center><img src="./img/docs/exec_flow_example.png" style="max-width: 900px" /></center>
+>
 > The data flow paradigm is the more important and fundamental one, and there might be changes for the exec mode in the future.
-> 
+>
 > While you can choose the according mode for a flow, it turned out to be a use case too to use the data flow mode in combination with few exec connections. This can lead to performance issues, but is very powerful if used in the right way. Ultimately, both paradigms are possible. For more precise definitions on the aspects of flow execution, see [ryvencore-qt features](https://leon-thomm.github.io/ryvencore-qt/features/).
 
 ## Editor Overview
@@ -71,7 +71,7 @@ The script's logs are hidden at the bottom, just drag the splitter handle. The n
 Next to the logs is the source code area where you can inspect the source code of the last selected node (click into the text field for syntax highlighting), and also edit method implementations of single objects. That's right, you can override method implementations of single objects. All these changes are temporary (they don't get saved) and only apply on the currently selected object, but it's a great way to play around or debug your components, especially when combining this with the console. For example you can just add some output to one of your nodes via the console, and then modify the update event of it to provide some additional data there via the source code preview. This is a really useful feature, however as you might suspect, modifying an object's method implementation is not exactly conventional and doesn't work in all cases. For example, when you created references somewhere else to this modified method, those references will still point to the old implementation of it.
 
 > **How to fix this**
-> 
+>
 > If you need to reference methods directly somewhere (for example when passing them as 'variable receiver'), you could use a workaround by, instead of passing the actual method reference, passing a lambda causing a new search for the newest version whenever the method is called, like this
 > ```python
 def retain(foo):
@@ -167,13 +167,13 @@ class StoreDataNode(Node):
 
     def update_event(self, input_called=-1):
         self.storage.append(self.input(0))
-    
+
     def get_state(self) -> dict:
         # assuming only pickle serializable data is stored in self.storage
         return {
             'data': self.storage
         }
-    
+
     def set_state(self, data: dict):
         self.storage = data['data']
 ```
@@ -207,9 +207,9 @@ Here I'll just informally present most of the important API methods for nodes yo
 | `set_var_val(name: str)`                                                 | Sets the value of a script variable with given name.
 | `register_var_receiver(name: str, method)`                                                 | Registers the given method as var receiver.
 | `unregister_var_receiver(name: str)`                                                 | Unregisters all registered methods as var receivers.
-<!-- 
-| ``                                                 | 
-| ``                                                 | 
+<!--
+| ``                                                 |
+| ``                                                 |
 | ``                                                 |  
 -->
 
@@ -255,7 +255,7 @@ class NodeBase(Node):
 
     def __init__(self, params):
         super().__init__(params)
-        
+
         # here we could add some stuff for all nodes below...
 
 
@@ -298,7 +298,7 @@ Simply use `export_nodes()` to define the nodes you want to expose to Ryven. And
 
 After importing the nodes package in Ryven, it looks like this:
 
-<center><img src="./images/mypackage_flow.png" style="max-width: 800px" /></center>
+<center><img src="./img/docs/mypackage_flow.png" style="max-width: 800px" /></center>
 
 ### Custom Widgets
 
@@ -400,7 +400,7 @@ export_nodes(
 )
 ```
 
-<center><img src="./images/custom_widgets_example.png" style="max-width: 800px" /></center>
+<center><img src="./img/docs/custom_widgets_example.png" style="max-width: 800px" /></center>
 
 When importing the nodes package in ryven console, `import_widgets(__file__)` does not actually import anything, so the widget classes don't get parsed at all so there is no Qt dependency then, and when trying to access them in the `widgets` object, it just just responds with `None`.
 
