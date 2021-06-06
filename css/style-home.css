@@ -776,6 +776,10 @@ h2.carousel_heading {
     margin: 5px 5px 25px 5px;
   }
 
+  .carousel-listitem .description {
+    width: 100%;
+  }
+
   .carousel-listitem .description span {
     width: 100%;
   }

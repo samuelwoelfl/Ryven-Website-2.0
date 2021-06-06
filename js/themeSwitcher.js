@@ -9,9 +9,6 @@ const header = document.querySelector(".header.bg-dark");
 const stylus_image = document.querySelector("#stylus_image");
 const interface_image = document.querySelector(".interface");
 
-console.log(document.querySelector(".docs-logo"));
-
-
 // const theme_buttons = document.querySelectorAll(".theme-button");
 // const theme_image = document.querySelector(".try-theme-image");
 // const default_theme_dark = document.querySelector("#theme1");
