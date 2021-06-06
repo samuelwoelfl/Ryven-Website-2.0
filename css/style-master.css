@@ -119,7 +119,7 @@ h3 {
 }
 
 .fade {
-  transition: .6s cubic-bezier(0.13, 0.57, 0.56, 0.95);
+  transition: opacity .6s cubic-bezier(0.13, 0.57, 0.56, 0.95), transform .6s cubic-bezier(0.13, 0.57, 0.56, 0.95);
 }
 
 .about.fade[data-scroll="out"] {
