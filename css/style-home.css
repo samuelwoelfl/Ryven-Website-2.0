@@ -654,6 +654,7 @@ h2.carousel_heading {
 @media only screen and (max-width: 990px) {
   .landingpage {
     background-size: cover;
+    margin-bottom: 15vh;
   }
 
   .features .text-container h3 {

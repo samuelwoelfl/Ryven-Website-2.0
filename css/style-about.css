@@ -90,3 +90,61 @@
   color: var(--text-tertiary);
   text-decoration: underline;
 }
+
+@media only screen and (max-width: 990px) {
+  .about {
+    margin-top: 10vh;
+  }
+
+  .about .leon {
+    flex-direction: column-reverse;
+    margin-bottom: 12vh;
+  }
+
+  .about .leon .right {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about .leon img {
+    width: 30%;
+    margin-bottom: 5vh;
+  }
+
+  .about .leon .left {
+    width: 100%;
+    align-items: center;
+  }
+
+  .about .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .about .details>* {
+    text-align: center;
+  }
+
+  .about .subheading {
+    margin-top: 1%;
+  }
+
+  .leon .emphasized-text {
+    margin-top: 2vh;
+  }
+
+  .about .contact {
+    margin-top: 6vh;
+  }
+
+  .about .contact h3 {
+    text-align: center;
+  }
+
+  .about .website .emphasized-text {
+    text-align: center;
+  }
+}

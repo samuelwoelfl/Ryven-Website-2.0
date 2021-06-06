@@ -37,6 +37,12 @@ body {
   font-weight: 400;
 }
 
+body.close .markdown-section {
+  width: var(--content-width);
+  max-width: var(--content-max-width);
+  padding: 0;
+}
+
 .markdown-section code, .markdown-section pre {
   background-color: var(--bg-dark);
   color: var(--theme-color);
@@ -67,4 +73,20 @@ body {
 .markdown-section hr {
   border: none;
   border-bottom: 1px var(--bg-dark);
+}
+
+@media only screen and (max-width: 990px) {
+  center img {
+    width: 100%;
+  }
+
+  .markdown-section {
+    width: var(--content-width);
+    max-width: var(--content-max-width);
+    padding: 0;
+  }
+
+  body.close .sidebar-toggle {
+    background-color: var(--bg-emphasize)
+  }
 }

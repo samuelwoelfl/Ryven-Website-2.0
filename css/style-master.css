@@ -326,6 +326,11 @@ header .desktop-navigation .github a, .theme-switch {
   display: none;
 }
 
+.mobile_navigation.app-nav {
+  margin: 0;
+  position: unset;
+}
+
 #menuToggle {
   display: flex;
   flex-direction: column;
@@ -333,8 +338,8 @@ header .desktop-navigation .github a, .theme-switch {
   -webkit-user-select: none;
   user-select: none;
   position: absolute;
-  top: calc((68px / 2) - 12px);
-  left: 85vw;
+  top: calc((72px / 2) - 12px);
+  right: 5%;
   padding: 0;
 }
 
@@ -392,7 +397,7 @@ header .desktop-navigation .github a, .theme-switch {
   justify-content: flex-end;
   align-items: flex-end;
   position: absolute;
-  top: calc(-1* ((68px / 2) + -12px));
+  top: calc(-1* ((72px / 2) + -12px));
   width: 100vw;
   height: 100vh;
   padding: 2em;
@@ -415,8 +420,12 @@ header .desktop-navigation .github a, .theme-switch {
   font-weight: 500;
 }
 
+.mobile_navigation.app-nav a.active {
+  border-bottom: 0;
+}
+
 #menuToggle.open #menu {
-  transform: translate(-85%, 0);
+  transform: translate(-87.5%, 0);
 }
 
 /* End Mobile Nav */
@@ -530,23 +539,6 @@ footer .social a:active {
 
   .logo {
     margin-top: -5px;
-  }
-
-  test {
-    white-space: pre !important;
-    /* CSS 2.0 */
-    white-space: pre-wrap !important;
-    /* CSS 2.1 */
-    white-space: pre-line !important;
-    /* CSS 3.0 */
-    white-space: pre-wrap !important;
-    /* Opera 4-6 */
-    white-space: -o-pre-wrap !important;
-    /* Opera 7 */
-    white-space: -moz-pre-wrap !important;
-    /* Mozilla */
-    word-wrap: break-word !important;
-    /* IE 5+ */
   }
 
   h1 {
