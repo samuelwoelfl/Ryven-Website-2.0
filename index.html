@@ -180,7 +180,7 @@
         <a href="releases"><span class="new">Ryven 3 - What's new?</span></a>
         <div class="main">
           <h1>Flow-based visual scripting for Python</h1>
-          <span class="subheading">A simple flow-based visual scripting environment for Python, serving as a diagram-like representation of your Python script while being executable at the same time.</span>
+          <span class="subheading">A simple visual scripting environment for Python providing a diagram-like structure for an intuitive interface while your nodes can execute any python code.</span>
           <div class="ctas">
             <div class="download primary-button">
               <span class="text">Download now</span>
@@ -978,9 +978,7 @@
               </svg>
               <h3>What is Ryven</h3>
             </div>
-            <p class="body-text">Ryven enables using the more diagram-like dataflow inspired representation to visualize your scripts. It <i>runs</i> code. You should know the Python programming language and its basic concepts. Ryven provides a
-              simple system to create nodes that can execute any Python code, and add intuitive GUI. Use cases range almost through the whole Python domain, from IoT, over any kind of data processing, Raspberry Pi, basically any web API, generative
-              engineering, and lots of stuff that hasn't even been tried yet.</p>
+            <p class="body-text">Ryven enables using the more diagram-like dataflow inspired structure to represent functionality. Each node <i>runs</i> code and Ryven provides a simple system to create those and add intuitive GUI. Use cases range almost through the whole Python domain, from IoT, over any kind of data processing, machine learning, generative engineering, Raspberry Pi, web APIs, and much more. You should know the Python programming language and its basic concepts.</p>
           </div>
           <div class="card">
             <div class="heading">
@@ -1010,9 +1008,7 @@
               </svg>
               <h3>What it's not</h3>
             </div>
-            <p class="body-text">A tool to learn how to program or to generally program in Python. It does not automatically generate graphs out of existing code. It does not try to conceptually replace source code by the visual graphs. Both
-              representations have their domains and, even though it enables significant abstraction, Ryven tries to make them work together in an efficient way. Please also keep in mind that Ryven is not a professional piece of software and that
-              it's still receiving quite active development and sometimes major changes.</p>
+            <p class="body-text">A tool to learn conventional programming or to generally program in Python. It does not automatically generate graphs out of existing code. It does not try to replace source code. Both representations have their domains and, even though it enables significant abstraction, Ryven tries to make them work <i>together</i>. Also, Ryven is not a professional piece of software and it's still receiving quite active development and sometimes major changes.</p>
           </div>
         </div>
       </div>
@@ -1024,7 +1020,7 @@
         <div class="feature-container">
           <div class="text-container fade">
             <h2>Create clear and pretty flows</h2>
-            <p class="emphasized-text">Design, of course, plays a huge role. Therefore, Ryven offers a variety of different flow designs.</p>
+            <p class="emphasized-text">Design, of course, plays a huge role when talking about <i>visual</i> scripting. Therefore, Ryven offers a variety of different flow designs.</p>
             <h3>Try some themes</h3>
             <div class="buttons">
               <div id="theme1" class="theme-button active">Pure Dark</div>
@@ -1079,9 +1075,8 @@
 
         <div class="feature-container">
           <div class="text-container fade">
-            <h2>Builtin interpreter</h2>
-            <p class="emphasized-text">Ryven has a console with a complete builtin Python REPL, which is really useful, not only for developing nodes, but also for accessing internal data that is not provided as an output natively, for example. You
-              can access a node's full API at any time through this console.</p>
+            <h2>Built-in Interpreter</h2>
+            <p class="emphasized-text">Using the built-in REPL you also have access to the backend session and you can use its whole API as well as access your nodes. Any modifications - like creating/renaming/deleting new scripts - will reactively be processed by the frontend automatically, so you can really do <i>everything</i> from the console.</p>
           </div>
           <div class="presentation-container fade">
             <div class="action-bar">
@@ -1095,23 +1090,21 @@
             <div class="window">
               <pre id="typewriter">
                 <code class="lang-python">
-def unify_number(number):
-    original = number
-    print(original)
-    number = number.replace('.', '')
-    number = number.replace('(', '')
-    number = number.replace("'", '')
-    number = number.replace("`", '')
-    fault_index = number.find(') ')
-    if fault_index != -1:
-        number = number[:fault_index] + number[fault_index + 2:]
-    else:
-        number = number.replace(')', '')
-
-    if number.find('+') != -1:
-        number = number.replace('+', '00')
-        landvorwahl = number[:4]
-        number = number[4:].strip()
+reset()
+< adding node to console context >
+added as obj
+obj
+< nodes.SetVar_Node(0x22eddacc380) at 0x0000022ED958F4C0 >
+node = obj
+node.create_output(label='additional data')
+node.set_output_val(1, 'test')
+session.scripts
+[< ryvencore.Script.Script object at 0x0000022ED9567910 >, 
+< ryvencore.MacroScript.MacroScript object at 0x0000022EDEFC0BB0 >]
+flow = session.scripts[0].flow
+flow.create_node(node.__class__)
+<nodes.SetVar_Node(0x22eddb99770) at 0x0000022EF9C5F900>
+flow.remove_node(flow.nodes[-1])
                 </code>
               </pre>
             </div>
@@ -1121,8 +1114,7 @@ def unify_number(number):
         <div class="feature-container">
           <div class="text-container fade">
             <h2>Ryven Console</h2>
-            <p class="emphasized-text">After you sufficiently tested a flow, if the nodes you used are compatible with Ryven Console, you can then run your flow in Ryven Console without any GUI, on the server for example, with much higher
-              performance. This is useful for larger performance intensive data processing tasks.</p>
+            <p class="emphasized-text">You can use Ryven Console to run your projects directly on the backend without any frontend dependencies. This enables more flexible deployment of your scripts and provides higher performance which can be useful for automation and larger intensive data processing tasks.</p>
           </div>
           <div class="presentation-container fade">
             <div class="action-bar">
@@ -1136,10 +1128,10 @@ def unify_number(number):
             <div class="window">
               <pre id="typewriter">
                 <code class="lang-python">
-34 <std__Checkpoint0.Checkpoint_Node object at 0x0000021ADFA5BE20>
-35 <std__Log0.Log_Node object at 0x0000021ADFA5BCD0>
+34 < std__Checkpoint0.Checkpoint_Node object at 0x0000021ADFA5BE20 >
+35 < std__Log0.Log_Node object at 0x0000021ADFA5BCD0 >
 ref by index: 18
---> obj: <std__Button0.Button_Node object at 0x0000021ADFA56C70>
+--> obj: < std__Button0.Button_Node object at 0x0000021ADFA56C70 >
 
 direct access:
     session   - the ryvencore session instance
@@ -1157,10 +1149,8 @@ obj.update()
         </div>
         <div class="feature-container">
           <div class="text-container fade">
-            <h2>Source code access and live manipulation</h2>
-            <p class="emphasized-text">As Ryven tends to enhancing the textual representation with the visual one, instead of replacing it, you always have access to the source code implementation of the nodes you use. Furthermore, you can actually
-              change method implementations any time which makes debugging and enhancing nodes very fast.
-              This is a very strong feature.</p>
+            <h2>Source Code Access</h2>
+            <p class="emphasized-text">As Ryven tries to enhance the textual representation, you always have access to the source code implementation of the nodes you use inside the editor. Furthermore, in some cases you can temporarily change method implementations.</p>
           </div>
           <div class="presentation-container fade">
             <div class="action-bar">
@@ -1201,9 +1191,8 @@ class Eval_Node(NodeBase):
 
         <div class="feature-container">
           <div class="text-container fade">
-            <h2>Stylus support</h2>
-            <p class="emphasized-text">Ryven also supports stylus pens. Besides editing your project, you can write notes into your flows by hand. Effective use of this feature significantly supports clarity and adds a whole new dimension to your
-              visual flows.</p>
+            <h2>Stylus Support</h2>
+            <p class="emphasized-text">You can write notes into your flows by hand using a stylus pen. Effective use of this feature significantly supports clarity and adds a whole new dimension to your visual flows.</p>
           </div>
           <div class="presentation-container fade">
             <div class="action-bar">
@@ -1227,8 +1216,7 @@ class Eval_Node(NodeBase):
               <div class="heading">
                 <h3>Philosophy</h3>
               </div>
-              <p class="body-text">While Ryven is neither a professional nor a commercial software, it runs mostly stable and it's 100% free and open source, following the approach to be a useful and flexible tool for students, teachers, or anyone
-                who wants to effectively depict and visualize Python scripts.</p>
+              <p class="body-text">Ryven is not a professional piece of software, and that's also not the aim. It's a hobby project mainly developed by one student. However, it repeatedly turned out to be useful for a wide range of different applications, not only but including educational purposes. And to make it accessible for anyone, it is free and open source. I've put quite some effort in making it great but it's not perfect and future, long-term development can only be driven by contributions.</p>
             </div>
           </div>
         </div>
