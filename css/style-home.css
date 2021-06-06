@@ -1,5 +1,4 @@
 .landingpage {
-  height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -8,8 +7,8 @@
   background-image: url("../img/BG-dots.png");
   background-position: top;
   background-repeat: no-repeat;
-  background-size: cover;
-  margin-bottom: 28vw;
+  background-size: contain;
+  margin-bottom: 10vw;
 }
 
 .landingpage .content-inner {
@@ -110,6 +109,10 @@
   align-items: center;
 }
 
+.main .ctas>* {
+  width: 300px;
+}
+
 .main .ctas .text {
   text-align: center;
 }
@@ -197,7 +200,7 @@
   justify-content: flex-start;
   align-items: center;
   background-color: var(--bg-emphasize);
-  margin: 10vh 0;
+  margin: 13vh 0;
   padding: 12vh 0;
   width: 100%;
 }
@@ -649,6 +652,10 @@ h2.carousel_heading {
 }
 
 @media only screen and (max-width: 990px) {
+  .landingpage {
+    background-size: cover;
+  }
+
   .features .text-container h3 {
     margin-top: 4vh;
     margin-bottom: 2vh;
@@ -674,6 +681,11 @@ h2.carousel_heading {
 
   .main .ctas .github {
     margin-left: 0;
+  }
+
+  .main .presentation img {
+    border-width: 4px;
+    margin-top: 8vh;
   }
 
   .about {
