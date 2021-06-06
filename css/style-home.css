@@ -127,11 +127,6 @@
   /* width: 300px; */
 }
 
-.main .ctas .github:active {
-  transform: scale(0.97);
-  background-color: var(--text-primary);
-}
-
 .main .presentation {
   width: 100%;
   display: flex;
