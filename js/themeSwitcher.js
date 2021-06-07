@@ -59,7 +59,7 @@ function switchTheme(theme) {
     } catch (err) {}
     try {
       const docs_logo = document.querySelector(".docs-logo");
-      docs_logo.setAttribute("src", "../img/docs/logo.png");
+      docs_logo.setAttribute("src", "img/docs/logo.png");
     } catch (err) {}
 
 
@@ -91,7 +91,7 @@ function switchTheme(theme) {
     } catch (err) {}
     try {
       const docs_logo = document.querySelector(".docs-logo");
-      docs_logo.setAttribute("src", "../img/docs/logo_white.png");
+      docs_logo.setAttribute("src", "img/docs/logo_white.png");
     } catch (err) {}
 
   }
