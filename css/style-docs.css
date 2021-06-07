@@ -76,7 +76,7 @@ body.close .markdown-section {
 }
 
 .alert.flat {
-  border-radius: 4px;
+  border-radius: 4px !important;
 }
 
 :root[data-theme="theme-dark"] .alert.flat {
@@ -84,13 +84,13 @@ body.close .markdown-section {
 }
 
 :root[data-theme="theme-dark"] .alert.flat.note {
-  background-color: #dbefdc22;
-  border-color: #c9e7cb22;
+  background-color: #a4d5ff22;
+  border-color: #c9cfe722;
 }
 
 :root[data-theme="theme-dark"] .alert.flat.tip {
-  background-color: #cdeefd22;
-  border-color: #b4e6fc22;
+  background-color: #cefde521;
+  border-color: #b4fcd622;
 }
 
 :root[data-theme="theme-dark"] .alert.flat.attention {
