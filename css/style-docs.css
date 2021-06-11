@@ -75,6 +75,37 @@ body.close .markdown-section {
   border-bottom: 1px var(--bg-dark);
 }
 
+.alert.flat {
+  border-radius: 4px !important;
+}
+
+:root[data-theme="theme-dark"] .alert.flat {
+  color: var(--text-secondary);
+}
+
+:root[data-theme="theme-dark"] .alert.flat.note {
+  background-color: #a4d5ff22;
+  border-color: #c9cfe722;
+}
+
+:root[data-theme="theme-dark"] .alert.flat.tip {
+  background-color: #cefde521;
+  border-color: #b4fcd622;
+}
+
+:root[data-theme="theme-dark"] .alert.flat.attention {
+  background-color: #fdd9d722;
+  border-color: #fcc2bf22;
+}
+
+:root[data-theme="theme-dark"] .alert.flat .title {
+  color: var(--text-primary)
+}
+
+:root[data-theme="theme-dark"] .alert.flat .title .icon {
+  filter: brightness(4) saturate(1);
+}
+
 @media only screen and (max-width: 990px) {
   center img {
     width: 100%;
